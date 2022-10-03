@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
 
-
-
-
-
 class HomeController extends Controller
 {
 
