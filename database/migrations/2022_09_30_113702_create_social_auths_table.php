@@ -13,13 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('instructor_auths', function (Blueprint $table) {
-            $table->id();
+        Schema::create('social_auths', function (Blueprint $table) {
+            $table->id('social_id');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('username')->unique();
             $table->string('password');
+            $table ->string('provider');
+            $table->string('provider_id');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('instructor_auths');
+        Schema::dropIfExists('social_auths');
     }
 };

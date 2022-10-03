@@ -2,15 +2,19 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+
+class SocialAuth extends Authenticable
+
+
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    protected $primaryKey="social_id";
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -20,9 +24,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'username',
         'password',
         'provider',
-        'provider_id'
+        'provider_id',
     ];
 
     /**

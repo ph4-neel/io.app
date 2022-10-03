@@ -2,15 +2,24 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\InsAuth as Ins;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+
+class Instructor_profile extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
+
+    protected $table = 'instructor_profiles';
+    protected $primarykey = "profile_id";
+
+    public function GetProfile(){
+
+        return $this->hasOne("App\Models\Instructor","instructor_id");
+
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -18,11 +27,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'provider',
-        'provider_id'
+        'position',
+        'introduction',
+        'experience',
+        'expertise',
     ];
 
     /**

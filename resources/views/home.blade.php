@@ -36,7 +36,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/register')}}"> User Register</a>
+                        <a class="nav-link" href="{{url('/ins_reg')}}"> Instructor Register</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -63,6 +63,10 @@
             </div>
         </div>
     </nav>
+
+
+
+    <a href="{{route('facebook_redirect')}}" target="_blank" rel="noopener noreferrer">facebook login</a>
 
 
 

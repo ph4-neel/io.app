@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\AdminAuth;
-use App\Models\InstructorAuth;
-use App\Models\User;
+use App\Models\ClientData;
+use App\Models\Instructor;
+use App\Models\Instructor_profile;
+use App\Models\SocialAuth;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
+use Laravel\Socialite\Facades\Socialite;
+
+
 
 
 
@@ -17,15 +22,21 @@ class HomeController extends Controller
 {
 
 
+
     protected $redirectTo = '/home';
 
 
-    //  View Routes
+    //  View Routes================================================================================>
 
+    public function test(){
+
+        return Instructor_profile::with('GetProfile')->get();
+    }
     public function home()
     {
         return view('home');
     }
+
 
     public function index()
     {
@@ -57,25 +68,24 @@ class HomeController extends Controller
         return view('layouts.profileData');
     }
 
-    public function ins_reg_view(){
+    public function ins_reg_view()
+    {
 
         return view('auth.Instructor_register');
-
     }
 
-    public function ins_log_view(){
+    public function ins_log_view()
+    {
 
         return view('auth.Instructor_login');
-
     }
 
-
-    //  View Routes
-
+    //  View Routes===========================================================>
 
 
 
-    // user Authentication
+
+    // user Authentication=====================================================>
 
     //custom login
     public function customLogin(Request $request)
@@ -112,7 +122,7 @@ class HomeController extends Controller
 
     public function create(array $data)
     {
-        return User::create([
+        return ClientData::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password'])
@@ -136,11 +146,11 @@ class HomeController extends Controller
         return Redirect('login');
     }
 
-    // user Authentication
+    // user Authentication=====================================================================>
 
 
 
-    //admins Auth
+    //admins Auth==============================================================================>
     public function admin_registration(Request $request)
     {
 
@@ -197,8 +207,11 @@ class HomeController extends Controller
         return redirect("login")->withSuccess('Login details are not valid');
     }
 
+    //Admin auth============================================================================>
 
 
+
+    //Instructor auth============================================================================>
     public function instructor_register(Request $request)
     {
 
@@ -219,7 +232,7 @@ class HomeController extends Controller
     public function instructor_create(array $data)
     {
 
-        InstructorAuth::create([
+        Instructor::create([
 
             'name' => $data['name'],
             'email' => $data['email'],
@@ -228,4 +241,88 @@ class HomeController extends Controller
 
         ]);
     }
+
+    //Instructor auth============================================================================>
+
+
+    //facebook auth=============================================================================>
+    public function facebook_redirect()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    public function facebook_callback()
+    {
+        $user=Socialite::driver('facebook')->user();
+        $this->create_user($user,'facebook');
+        return redirect()->route('home');
+    }
+
+
+    public function create_user($data,$provider){
+
+        $user=SocialAuth::where('email',$data->email)->first();
+
+        if($user){
+
+            $user->update([
+                'provider'=>$provider,
+                'provider_id'=>$data->id,
+            ]);
+        }
+
+        else{
+
+            SocialAuth::create([
+                'name'=>$data->name,
+                'email'=>$data->email,
+                'provider'=>$provider
+            ]);
+
+
+        }
+
+        Auth::login($user);
+
+    }
+     //facebook auth=============================================================================>
+
+
+
+     //Profile data=============================================================================>
+    public function Instructor_profile(Request $request){
+
+        $request->validate([
+
+            'position' => 'required',
+            'introduction' => 'required',
+            'experience' => 'required',
+            'expertise' => 'required'
+        ]);
+
+        $data = $request->all();
+        $check = $this->instructor_create($data);
+
+        return redirect("home")->withSuccess('data is stored');
+
+
+    }
+
+    public function profile_create(Array $data)
+    {
+
+
+        Instructor_profile::create([
+
+            'position' => $data['position'],
+            'introduction' => $data['introduction'],
+            'experience' => $data['experience'],
+            'expertise' =>$data['expertise']
+
+        ]);
+
+    }
+
+    //Profile data=============================================================================>
+
 }

@@ -4,17 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\InsAuth as Ins;
-
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 
 
 
 
-class InstructorAuth extends Ins
+class ClientData extends Authenticatable
+
 {
-    use HasFactory, Notifiable;
+    use  HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -24,8 +24,8 @@ class InstructorAuth extends Ins
     protected $fillable = [
         'name',
         'email',
-        'username',
         'password',
+
     ];
 
     /**
