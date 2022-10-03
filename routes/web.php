@@ -40,8 +40,63 @@ Route::post('/ins_reg',[HomeController::class,'ins_reg_view']) ->name('instructo
 Route::get('/ins_login',[HomeController::class,'ins_log_view']) ->name('ins_login');
 Route::post('/ins_login',[HomeController::class,'ins_log_view']) ->name('ins_logins');
 
+<<<<<<< HEAD
 //instructor Auth==================================================================>
 
+=======
+Route::get('/login',function()
+{
+    return view('layouts.login');
+});
+
+<<<<<<< HEAD
+Route::get('/register',function()
+{
+    return view('layouts.register');
+});
+
+Route::get('/forgot',function()
+{
+    return view('layouts.forgotpass');
+});
+
+Route::get('/logout',function()
+{
+    return view('layouts.logout');
+});
+
+Route::get('/instituteregister',function()
+{
+    return view('layouts.instituteregister');
+});
+
+Route::get('/institutelogin',function()
+{
+    return view('layouts.institutelogin');
+});
+
+Route::get('/enterpriseregister',function()
+{
+    return view('layouts.enterpriseregister');
+});
+
+Route::get('/enterpriselogin',function()
+{
+    return view('layouts.enterpriselogin');
+});
+
+Route::get('/companyregister',function()
+{
+    return view('layouts.companyregister');
+});
+
+Route::get('/companylogin',function()
+{
+    return view('layouts.companylogin');
+});
+=======
+//instructor Auth
+>>>>>>> 8bb77b97bbe734078cba1e7a719cbf7863459d30
 
 //Social Media Authentication =====================================================>
 Route::get('/auth/facebook/redirect',[HomeController::class,'facebook_redirect']) ->name('facebook_redirect');
@@ -54,3 +109,4 @@ Route::post('/profiles',[HomeController::class,'home']) ->name('profiles');
 
 Route::get('signout', [HomeController::class, 'signOut'])->name('signout');
 
+>>>>>>> 620d4d3bbb127d5745128b1bcc1d75ac16b555b3
