@@ -4,7 +4,44 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
+Route::get ('/', function(){
+    return view('home');
+});
 
+Route::get ('/dash', function(){
+    return view('layouts.index');
+});
+
+
+
+Route::get ('/anal', function(){
+    return view('layouts.analytics');
+});
+
+Route::get ('/crms', function(){
+    return view('layouts.crm');
+});
+
+Route::get ('/ecom', function(){
+    return view('layouts.ecom');
+});
+
+Route::get ('/project', function(){
+    return view('layouts.project-management');
+});
+
+
+Route::get ('/saas', function(){
+    return view('layouts.saas');
+});
+
+Route::get ('/courses', function(){
+    return view('layouts.courses');
+});
+
+Route::get ('/details', function(){
+    return view('layouts.courses_details');
+});
 
 //for testing
 
@@ -40,8 +77,64 @@ Route::post('/ins_reg',[HomeController::class,'ins_reg_view']) ->name('instructo
 Route::get('/ins_login',[HomeController::class,'ins_log_view']) ->name('ins_login');
 Route::post('/ins_login',[HomeController::class,'ins_log_view']) ->name('ins_logins');
 
+<<<<<<< HEAD
 //instructor Auth==================================================================>
 
+=======
+
+//instructor Auth==================================================================>
+
+Route::get('/login',function()
+{
+    return view('layouts.login');
+});
+
+Route::get('/register',function()
+{
+    return view('layouts.register');
+});
+
+Route::get('/forgot',function()
+{
+    return view('layouts.forgotpass');
+});
+
+Route::get('/logout',function()
+{
+    return view('layouts.logout');
+});
+
+Route::get('/instituteregister',function()
+{
+    return view('layouts.instituteregister');
+});
+
+Route::get('/institutelogin',function()
+{
+    return view('layouts.institutelogin');
+});
+
+Route::get('/enterpriseregister',function()
+{
+    return view('layouts.enterpriseregister');
+});
+
+Route::get('/enterpriselogin',function()
+{
+    return view('layouts.enterpriselogin');
+});
+
+Route::get('/companyregister',function()
+{
+    return view('layouts.companyregister');
+});
+
+Route::get('/companylogin',function()
+{
+    return view('layouts.companylogin');
+});
+
+>>>>>>> 20ce5482e3d5de383c514c417ef51ea69af0eda4
 //Social Media Authentication =====================================================>
 Route::get('/auth/facebook/redirect',[HomeController::class,'facebook_redirect']) ->name('facebook_redirect');
 Route::get('/auth/facebook/callback',[HomeController::class,'facebook_callback']) ->name('facebook_callback');
@@ -53,4 +146,7 @@ Route::post('/profiles',[HomeController::class,'home']) ->name('profiles');
 
 Route::get('signout', [HomeController::class, 'signOut'])->name('signout');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 20ce5482e3d5de383c514c417ef51ea69af0eda4
