@@ -26,9 +26,24 @@ Route::get ('/ecom', function(){
     return view('layouts.ecom');
 });
 
+Route::get ('/footer', function(){
+    return view('layouts.footer');
+});
+
+Route::get ('/entry_soft', function(){
+    return view('layouts.entry_soft');
+});
+
+
 Route::get ('/project', function(){
     return view('layouts.project-management');
 });
+
+Route::get ('/soft', function(){
+    return view('layouts.softskills');
+});
+
+
 
 
 Route::get ('/saas', function(){
