@@ -5,7 +5,7 @@
 
     @include('layouts.app')
 
-   
+
 
 
     <!-- ===============================================-->
@@ -44,7 +44,7 @@
 
 <body>
 
-  
+
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -102,23 +102,24 @@
                                             <div class="col-6 col-md-5">
                                                 <div class="nav flex-column">
                                                     <div class="nav flex-column">
-                                                       
+
                                                         <div class="nav flex-column">
                                                             <UL class="nav-link py-1 link-600 fw-medium">
                                                                 TOP SKILLS
-                                                            <UL>
-                                                                <a class="nav-link py-1 link-600 fw-medium"
-                                                                href="{{ url('/courses') }}">Personality Developmen</a>
-                                                                <a class="nav-link py-1 link-600 fw-medium"
-                                                                href="{{ url('/courses') }}">Presentation</a>
+                                                                <UL>
+                                                                    <a class="nav-link py-1 link-600 fw-medium"
+                                                                        href="{{ url('/courses') }}">Personality
+                                                                        Developmen</a>
+                                                                    <a class="nav-link py-1 link-600 fw-medium"
+                                                                        href="{{ url('/courses') }}">Presentation</a>
+                                                                </UL>
                                                             </UL>
-                                                            </UL>
-                                                            
+
 
 
                                                         </div>
-                                                    
-                                                     </div>             
+
+                                                    </div>
 
                                                     <a class="nav-link py-1 link-600 fw-medium"
                                                         href="{{ url('/courses') }}">SOFT SKILLS</a>
@@ -144,16 +145,17 @@
                                             src="../assets/img/icons/spot-illustrations/authentication-corner.png"
                                             width="130" alt="" />
 
-                                            <div class="row">
-                                                <div class="col-6 col-md-5">
-                                                    <div class="nav flex-column"><a class="nav-link py-1 link-600 fw-medium"
-                                                            href="{{ url('/courses') }}">Top professons</a>
-                                                        
-                                                    </div>
+                                        <div class="row">
+                                            <div class="col-6 col-md-5">
+                                                <div class="nav flex-column"><a
+                                                        class="nav-link py-1 link-600 fw-medium"
+                                                        href="{{ url('/courses') }}">Top professons</a>
+
                                                 </div>
-    
                                             </div>
-                                      
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -166,41 +168,54 @@
                                 <div class="bg-white dark__bg-1000 rounded-3 py-2"><a
                                         class="dropdown-item link-600 fw-medium"
                                         href="{{ url('/courses') }}">Contact</a>
-                                        <a
-                                        class="dropdown-item link-600 fw-medium"
-                                        href="{{ url('/courses') }}">FAQ</a>
-                                        <a
-                                        class="dropdown-item link-600 fw-medium"
-                                        href="{{ url('/courses') }}">Team</a>
-                                        <a
-                                        class="dropdown-item link-600 fw-medium"
-                                        href="{{ url('/courses') }}">About Us</a>
+                                    <a class="dropdown-item link-600 fw-medium" href="{{ url('/courses') }}">FAQ</a>
+                                    <a class="dropdown-item link-600 fw-medium" href="{{ url('/courses') }}">Team</a>
+                                    <a class="dropdown-item link-600 fw-medium" href="{{ url('/courses') }}">About
+                                        Us</a>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            id="documentations">REGISTER</a>
-                        <div class="dropdown-menu dropdown-menu-card border-0 mt-0"
-                            aria-labelledby="documentations">
-                            <div class="bg-white dark__bg-1000 rounded-3 py-2"><a
-                                    class="dropdown-item link-600 fw-medium"
-                                    href="{{ url('/register') }}">Admin Register</a>
-                                    <a
-                                    class="dropdown-item link-600 fw-medium"
-                                    href="{{ url('/instituteregister') }}">Instrecter Register</a>
-                                    <a
-                                    class="dropdown-item link-600 fw-medium"
-                                    href="{{ url('/enterpriseregister') }}">Enterprise Register</a>
-                                    <a
-                                    class="dropdown-item link-600 fw-medium"
-                                    href="{{ url('/companyregister') }}">Company Register</a>
-                                    
+                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                id="documentations">REGISTER</a>
+                            <div class="dropdown-menu dropdown-menu-card border-0 mt-0"
+                                aria-labelledby="documentations">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2"><a
+                                        class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/admin_register') }}">Admin
+                                        Register</a>
+                                    <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/instituteregister') }}">Instrecter Register</a>
+                                    <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/enterpriseregister') }}">Enterprise Register</a>
+                                    <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/companyregister') }}">Company Register</a>
+
+                                </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
+
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                id="documentations">Login</a>
+                            <div class="dropdown-menu dropdown-menu-card border-0 mt-0"
+                                aria-labelledby="documentations">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2"><a
+                                        class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/admin_login') }}">Admin
+                                        Login</a>
+                                    <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/instituteregister') }}">Instrecter Register</a>
+                                    <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/enterpriseregister') }}">Enterprise Register</a>
+                                    <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/companyregister') }}">Company Register</a>
+
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                   
+
                 </div>
             </div>
         </nav>
@@ -214,12 +229,12 @@
                                 <h5 id="modalLabel">Register</h5>
                             </div>
                             <div class="col-auto">
-                                <p class="fs--1 text-600 mb-0">Have an account? <a
-                                        href="{{ url('/forgot') }}">forgot password</a></p>
+                                <p class="fs--1 text-600 mb-0">Have an account? <a href="{{ url('/forgot') }}">forgot
+                                        password</a></p>
                             </div>
                             <div class="col-auto">
-                                <p class="fs--1 text-600 mb-0">Have an account? <a
-                                        href="{{ url('/') }}"></a></p>
+                                <p class="fs--1 text-600 mb-0">Have an account? <a href="{{ url('/') }}"></a>
+                                </p>
                             </div>
                         </div>
                         <form>
@@ -261,7 +276,7 @@
                             <div class="col-sm-6"><a class="btn btn-outline-facebook btn-sm d-block w-100"
                                     href="#"><span class="fab fa-facebook-square me-2"
                                         data-fa-transform="grow-8"></span> facebook</a></div>
-                                        
+
                         </div>
                     </div>
                 </div>
@@ -273,8 +288,8 @@
         <!-- <section> begin ============================-->
         <section class="py-0 overflow-hidden light" id="banner">
 
-            <div class="bg-holder overlay"
-                style="background-image:url(../assets/img/generic/bg-1.jpg);background-position: center bottom;">
+            <div class="bg-holder overlay">
+                <img class="img-fluid" src="{{ asset('/images/pic.jpg') }}" alt="" />
             </div>
             <!--/.bg-holder-->
 
@@ -293,8 +308,7 @@
                                 data-fa-transform="shrink-6 down-1"></span></a>
                     </div>
                     <div class="col-xl-7 offset-xl-1 align-self-end mt-4 mt-xl-0"><a
-                            class="img-landing-banner rounded" href="../index.html"><img class="img-fluid"
-                                src="../assets/img/generic/dashboard-alt.jpg" alt="" /></a></div>
+                            class="img-landing-banner rounded" href="../index.html"></a></div>
                 </div>
             </div>
             <!-- end of .container-->

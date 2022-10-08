@@ -40,15 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
-        'clients' => [
-            'driver' => 'session',
-            'provider' => 'client_data',
-        ],
     ],
-
-
-
 
     /*
     |--------------------------------------------------------------------------
@@ -73,10 +65,16 @@ return [
             'model' => App\Models\AdminAuth::class,
         ],
 
-        'clients' => [
+        'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\ClientData::class,
+            'model' => App\Models\AdminAuth::class,
         ],
+
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\AdminAuth::class,
+        ],
+
 
     ],
 
