@@ -10,6 +10,51 @@ use Illuminate\Support\Facades\Route;
 Route::get('/getData',[ApiController::class,'get_SoftSkills']);
 
 
+
+Route::get ('/anal', function(){
+    return view('layouts.analytics');
+});
+
+Route::get ('/crms', function(){
+    return view('layouts.crm');
+});
+
+Route::get ('/ecom', function(){
+    return view('layouts.ecom');
+});
+
+Route::get ('/footer', function(){
+    return view('layouts.footer');
+});
+
+Route::get ('/entry_soft', function(){
+    return view('layouts.entry_soft');
+});
+
+
+Route::get ('/project', function(){
+    return view('layouts.project-management');
+});
+
+Route::get ('/soft', function(){
+    return view('layouts.softskills');
+});
+
+
+
+
+Route::get ('/saas', function(){
+    return view('layouts.saas');
+});
+
+Route::get ('/courses', function(){
+    return view('layouts.courses');
+});
+
+Route::get ('/details', function(){
+    return view('layouts.courses_details');
+});
+
 //for testing
 
 Route::get('/getSkills',[HomeController::class,'getAll_Skills']) ->name('getAll_Skills');
