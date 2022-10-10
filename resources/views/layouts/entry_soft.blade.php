@@ -43,33 +43,15 @@
                         </div>
                     </div>
                     <div class="row g-3">
+                        @foreach ( $skills as $items )
+
+
+
                         <div class="col-md-4">
                             <div class="card"> <img src="{{ asset('images/background_page-0001.jpg') }}" class="card-img-top">
                                 <div class="card-body">
-                                    <div class="d-flex justify-content-between"> <span class="font-weight-bold">Wood
-                                            Sofa set-3</span> <span class="font-weight-bold">$550</span> </div>
-                                    <p class="card-text mb-1 mt-1">Some quick example text to build on the card title
-                                        and make up the bulk of the card's content.</p>
-                                    <div class="d-flex align-items-center flex-row"> <img
-                                            src="{{ asset('images/IDL-112.jpg') }}" width="20"> <span
-                                            class="guarantee">Preferd by Interviewo</span> </div>
-                                </div>
-                                <hr>
-                                <div class="card-body">
-                                    <div class="text-right buttons"> 
-                                         <button class="btn btn-outline-dark">Know More</button>
-                                         <button class="btn btn-dark">Courses</button> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card"> <img src="{{ asset('images/background_page-0001.jpg') }}" class="card-img-top">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between"> <span class="font-weight-bold">Wood
-                                            Sofa set-3</span> <span class="font-weight-bold">$600</span> </div>
-                                    <p class="card-text mb-1 mt-1">Some quick example text to build on the card title
-                                        and make up the bulk of the card's content.</p>
+                                    <div class="d-flex justify-content-between"> <span class="font-weight-bold">{{$items->title}}</span> <span class="font-weight-bold">$600</span> </div>
+                                    <p class="card-text mb-1 mt-1">{{$items->description}}</p>
                                     <div class="d-flex align-items-center flex-row"> <img
                                             src="{{ asset('images/IDL-112.jpg') }}" width="20"> <span
                                             class="guarantee">Preferd by Interviewo</span> </div>
@@ -77,35 +59,18 @@
                                 <hr>
                                 <div class="card-body">
                                     <div class="text-right buttons">
-                                         <button class="btn btn-outline-dark">Know More</button>
+                                         <a href="{{ url('get_data/'.$items->id) }}" class="btn btn-outline-dark">Know More</a>
                                          <button class="btn btn-dark">Courses</button>
                                      </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="card"> <img src="{{ asset('images/background_page-0001.jpg') }}" class="card-img-top">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between"> <span class="font-weight-bold">Wood
-                                            Sofa set-3</span> <span class="font-weight-bold">$600</span> </div>
-                                    <p class="card-text mb-1 mt-1">Some quick example text to build on the card title
-                                        and make up the bulk of the card's content.</p>
-                                    <div class="d-flex align-items-center flex-row"> <img
-                                            src="{{ asset('images/IDL-112.jpg') }}" width="20"> <span
-                                            class="guarantee">Preferd by Interviewo</span> </div>
-                                </div>
-                                <hr>
-                                <div class="card-body">
-                                    <div class="text-right buttons">
-                                         <button class="btn btn-outline-dark">Know More</button>
-                                         <button class="btn btn-dark">Courses</button>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        @endforeach
+
                     </div>
                 </div>
-              
+
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                     <!--Dining-->
                     <div class="d-flex justify-content-between p-3 bg-white mb-3 align-items-center"> <span
@@ -313,8 +278,8 @@
                 </div>
             </div>
         </section>
-    
-    
+
+
 
 
 

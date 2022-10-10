@@ -12,13 +12,17 @@ Route::get('/getData',[ApiController::class,'get_SoftSkills']);
 
 //for testing
 
-Route::get('/getSkills',[HomeController::class,'getAll_Skills']) ->name('getAll_Skills');
 
 
+
+Route::get('get_data/{id}', [HomeController::class, 'getId']);
 
 //view Routes
 Route::get('/',[HomeController::class,'home_view']) ->name('home_view');
 Route::get('/analytics', [HomeController::class, 'analytics_view']);
+Route::get('/soft',[HomeController::class,'getAll_Skills']);
+
+
 
 // User Auth=============================================================================================>
 Route::get('login', [HomeController::class, 'index'])->name('login');

@@ -64,6 +64,11 @@ class HomeController extends Controller
         return view('auth.admin_login');
     }
 
+    public function soft()
+    {
+
+        return view('layouts.entry_soft');
+    }
 
     //  View Routes===========================================================>
 
@@ -160,23 +165,25 @@ class HomeController extends Controller
     public function getAll_Skills()
     {
 
-        $skills=Skills::all();
+        $skills = Skills::all();
 
-        $data=compact('skills');
+        $data = compact('skills');
 
-        return view('skills');
+        return view('layouts.entry_soft')->with($data);
     }
 
 
-    public function getSkills_id(Request $id)
+    public function getId($id)
     {
 
+        $skills = Skills::find($id);
 
-        $student = Skills::find($id);
+        $data = compact('skills');
+
+        return view('skill_detail')->with($data);
 
 
     }
 
-
-     //skill controller=========================================================================>
+    //skill controller=========================================================================>
 }

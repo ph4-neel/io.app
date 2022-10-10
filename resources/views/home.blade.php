@@ -122,7 +122,7 @@
                                                     </div>
 
                                                     <a class="nav-link py-1 link-600 fw-medium"
-                                                        href="{{ url('/courses') }}">SOFT SKILLS</a>
+                                                        href="{{ url('/soft') }}">SOFT SKILLS</a>
 
                                                     <a class="nav-link py-1 link-600 fw-medium"
                                                         href="{{ url('/courses') }}">TOOLS SKILLS</a>
