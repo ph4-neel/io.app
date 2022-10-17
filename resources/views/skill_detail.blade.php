@@ -8,18 +8,7 @@
 </head>
 <body>
 
-
-
-
-    <h1>{{$skills->title}}</h1>
-
-    <p>{{$skills->description}}</p>
-    <p>{{$skills->details}}</p>
-    <p>{{$skills->benefits}}</p>
-    <p>{{$skills->features}}</p>
-    <a href="{{$skills->tags}}">#{{$skills->tags}}</a>
-
-
+    hello
 
 </body>
 </html>

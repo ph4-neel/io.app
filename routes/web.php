@@ -6,8 +6,16 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//Api for App
-Route::get('/getData',[ApiController::class,'get_SoftSkills']);
+//Api for App==============================================================================>
+Route::get('/Soft_skills',[ApiController::class,'get_SoftSkills'])->name('get_SoftSkills');
+Route::get('/Hard_skills',[ApiController::class,'GetHardSkills'])->name('GetHardSkills');
+Route::get('/consumers',[ApiController::class,'getConsumers'])->name('get_consumers');
+
+Route::get('consumers_id/{id}',[ApiController::class,'getConsumers_id'])->name('get_consumers_id');
+Route::get('Soft_skills_id/{id}',[ApiController::class,'get_SoftSkills_id'])->name('get_SoftSkills_id');
+
+
+//Api for App==============================================================================>
 
 
 //for testing
@@ -21,6 +29,9 @@ Route::get('get_data/{id}', [HomeController::class, 'getId']);
 Route::get('/',[HomeController::class,'home_view']) ->name('home_view');
 Route::get('/analytics', [HomeController::class, 'analytics_view']);
 Route::get('/soft',[HomeController::class,'getAll_Skills']);
+Route::get('/data_entry',[HomeController::class,'data']);
+Route::get('/soft_list',[HomeController::class,'get_Skills_List']) ->name('soft_list');
+
 
 
 
@@ -60,4 +71,7 @@ Route::get('/profiles',[HomeController::class,'profile_data']) ->name('profiles'
 Route::post('/profiles',[HomeController::class,'home']) ->name('profiles');
 
 Route::get('signout', [HomeController::class, 'signOut'])->name('signout');
+
+
+Route::post('/data_entry',[HomeController::class,'Skill_post']) ->name('data_entry');
 

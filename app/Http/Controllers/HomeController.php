@@ -33,6 +33,11 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function data(){
+
+        return view('admin.data_entry');
+    }
+
     public function analytics_view()
     {
 
@@ -69,6 +74,19 @@ class HomeController extends Controller
 
         return view('layouts.entry_soft');
     }
+
+    public function soft_list()
+    {
+
+        return view('admin.soft_skills');
+    }
+
+    public function api_view(){
+
+        return view('api.api');
+    }
+
+
 
     //  View Routes===========================================================>
 
@@ -150,15 +168,21 @@ class HomeController extends Controller
     {
 
 
+
         $skills = new Skills();
         $skills->title = $request['title'];
         $skills->description = $request['description'];
         $skills->benefits = $request['benefits'];
-        $skills->image_path = $request['image_path'];
         $skills->features = $request['features'];
+        $skills->image_path = $request['image_path'];
+        $skills->tags = $request['tags'];
         $skills->details = $request['details'];
 
-        $skills->save();
+        $result=$skills->save();
+
+        if($result){
+            return view('layouts.analytics');
+        }
     }
 
 
@@ -172,9 +196,22 @@ class HomeController extends Controller
         return view('layouts.entry_soft')->with($data);
     }
 
+    public function get_Skills_List()
+    {
+
+        $skills = Skills::all();
+
+        $data = compact('skills');
+
+        return view('admin.soft_skills')->with($data);
+    }
+
 
     public function getId($id)
     {
+
+
+
 
         $skills = Skills::find($id);
 

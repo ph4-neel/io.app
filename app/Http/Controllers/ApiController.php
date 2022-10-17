@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUser;
 use App\Models\AdminAuth;
+use App\Models\Skills;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller
@@ -14,7 +15,7 @@ class ApiController extends Controller
     {
 
 
-        $posts = AdminAuth::all();
+        $posts = Skills::all();
 
         return response()->json([
             'soft_Skills' => $posts
@@ -24,7 +25,7 @@ class ApiController extends Controller
     public function GetHardSkills()
     {
 
-        $posts = AdminAuth::all();
+        $posts = Skills::all();
 
         return response()->json([
             'hard_skills' => $posts

@@ -93,54 +93,50 @@
                                     </div>
                                 </a>
                                 <ul class="nav collapse show" id="dashboard">
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('/dash') }}"
+
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/consumers') }}"
                                             aria-expanded="false">
                                             <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Default</span>
+                                                    class="nav-link-text ps-1">Consumers</span>
                                             </div>
                                         </a>
                                         <!-- more inner pages-->
                                     </li>
-                                    <li class="nav-item"><a class="nav-link active" href="{{ url('/anal') }}"
+
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/soft_list') }}"
                                             aria-expanded="false">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Analytics</span>
+                                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Soft
+                                                    Skills</span>
                                             </div>
                                         </a>
                                         <!-- more inner pages-->
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('/crms') }}"
-                                            aria-expanded="false">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">CRM</span>
-                                            </div>
-                                        </a>
-                                        <!-- more inner pages-->
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('/ecom') }}"
-                                            aria-expanded="false">
-                                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">E
-                                                    commerce</span>
-                                            </div>
-                                        </a>
-                                        <!-- more inner pages-->
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="{{ url('/project') }}"
-                                            aria-expanded="false">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">Management</span>
-                                            </div>
-                                        </a>
-                                        <!-- more inner pages-->
-                                    </li>
+
                                     <li class="nav-item"><a class="nav-link" href="{{ url('/saas') }}"
                                             aria-expanded="false">
-                                            <div class="d-flex align-items-center"><span
-                                                    class="nav-link-text ps-1">SaaS</span>
+                                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Hard
+                                                    Skills</span>
                                             </div>
                                         </a>
                                         <!-- more inner pages-->
                                     </li>
+
+
+                                    <li class="nav-item"><a class="nav-link" href="{{ url('/saas') }}"
+                                        aria-expanded="false">
+                                        <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Api For App</span>
+                                        </div>
+                                    </a>
+                                    <!-- more inner pages-->
+                                </li>
+
+                                <li class="nav-item"><a class="nav-link" href="{{ url('/data_entry') }}"
+                                    aria-expanded="false">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Data Entry</span>
+                                    </div>
+                                </a>
+                                <!-- more inner pages-->
+                            </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -178,8 +174,7 @@
                                         <!-- more inner pages-->
                                     </li>
                                     <li class="nav-item"><a class="nav-link"
-                                            href="../documentation/customization/styling.html"
-                                            aria-expanded="false">
+                                            href="../documentation/customization/styling.html" aria-expanded="false">
                                             <div class="d-flex align-items-center"><span
                                                     class="nav-link-text ps-1">Styling</span>
                                             </div>
@@ -452,8 +447,7 @@
                                                     <div class="notification-avatar">
                                                         <div class="avatar avatar-2xl me-3">
                                                             <img class="rounded-circle"
-                                                                src="../assets/img/team/1-thumb.png"
-                                                                alt="" />
+                                                                src="../assets/img/team/1-thumb.png" alt="" />
 
                                                         </div>
                                                     </div>
@@ -479,7 +473,8 @@
                                                     </div>
                                                     <div class="notification-body">
                                                         <p class="mb-1"><strong>Albert Brooks</strong> reacted to
-                                                            <strong>Mia Khalifa's</strong> status</p>
+                                                            <strong>Mia Khalifa's</strong> status
+                                                        </p>
                                                         <span class="notification-time"><span
                                                                 class="me-2 fab fa-gratipay text-danger"></span>9hr</span>
 
@@ -502,8 +497,7 @@
                                                         <p class="mb-1">The forecast today shows a low of 20&#8451;
                                                             in California. See today's weather.</p>
                                                         <span class="notification-time"><span class="me-2"
-                                                                role="img"
-                                                                aria-label="Emoji">🌤️</span>1d</span>
+                                                                role="img" aria-label="Emoji">🌤️</span>1d</span>
 
                                                     </div>
                                                 </a>
@@ -515,8 +509,7 @@
                                                     <div class="notification-avatar">
                                                         <div class="avatar avatar-xl me-3">
                                                             <img class="rounded-circle"
-                                                                src="../assets/img/logos/oxford.png"
-                                                                alt="" />
+                                                                src="../assets/img/logos/oxford.png" alt="" />
 
                                                         </div>
                                                     </div>
@@ -545,8 +538,7 @@
                                                             join the group: United Nations International Children's Fund
                                                         </p>
                                                         <span class="notification-time"><span class="me-2"
-                                                                role="img"
-                                                                aria-label="Emoji">🙋‍</span>2d</span>
+                                                                role="img" aria-label="Emoji">🙋‍</span>2d</span>
 
                                                     </div>
                                                 </a>
@@ -583,7 +575,7 @@
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="../pages/user/settings.html">Settings</a>
                                     <a class="dropdown-item"
-                                        href="../pages/authentication/card/logout.html" >Logout</a>
+                                        href="../pages/authentication/card/logout.html">Logout</a>
                                 </div>
                             </div>
                         </li>
@@ -608,8 +600,8 @@
                                             </div>
                                         </a></li>
                                     <li class="nav-item" role="presentation"><a class="nav-link mb-0"
-                                            id="sessions-tab" data-bs-toggle="tab" href="#sessions"
-                                            role="tab" aria-controls="sessions" aria-selected="false">
+                                            id="sessions-tab" data-bs-toggle="tab" href="#sessions" role="tab"
+                                            aria-controls="sessions" aria-selected="false">
                                             <div class="audience-tab-item p-2 pe-4">
                                                 <h6 class="text-800 fs--2 text-nowrap">Sessions</h6>
                                                 <h5 class="text-800">6.3K</h5>
@@ -619,9 +611,9 @@
                                                 </div>
                                             </div>
                                         </a></li>
-                                    <li class="nav-item" role="presentation"><a class="nav-link mb-0"
-                                            id="rate-tab" data-bs-toggle="tab" href="#rate" role="tab"
-                                            aria-controls="rate" aria-selected="false">
+                                    <li class="nav-item" role="presentation"><a class="nav-link mb-0" id="rate-tab"
+                                            data-bs-toggle="tab" href="#rate" role="tab" aria-controls="rate"
+                                            aria-selected="false">
                                             <div class="audience-tab-item p-2 pe-4">
                                                 <h6 class="text-800 fs--2 text-nowrap">Bounce Rate</h6>
                                                 <h5 class="text-800">9.49%</h5>
@@ -632,8 +624,8 @@
                                             </div>
                                         </a></li>
                                     <li class="nav-item" role="presentation"><a class="nav-link mb-0"
-                                            id="duration-tab" data-bs-toggle="tab" href="#duration"
-                                            role="tab" aria-controls="duration" aria-selected="false">
+                                            id="duration-tab" data-bs-toggle="tab" href="#duration" role="tab"
+                                            aria-controls="duration" aria-selected="false">
                                             <div class="audience-tab-item p-2 pe-4">
                                                 <h6 class="text-800 fs--2 text-nowrap">Session Duration</h6>
                                                 <h5 class="text-800">4m 03s</h5>
@@ -659,8 +651,7 @@
                                         <div class="echart-audience" data-echart-responsive="true"
                                             style="height:320px;"></div>
                                     </div>
-                                    <div class="tab-pane" id="rate" role="tabpanel"
-                                        aria-labelledby="rate-tab">
+                                    <div class="tab-pane" id="rate" role="tabpanel" aria-labelledby="rate-tab">
                                         <div class="echart-audience" data-echart-responsive="true"
                                             style="height:320px;"></div>
                                     </div>
@@ -702,8 +693,7 @@
                                                     website and get things done faster with Falcon</h5>
                                             </div>
                                             <div class="col-12 col-sm-auto ms-auto">
-                                                <button class="btn btn-falcon-primary"
-                                                    type="button">Connect</button>
+                                                <button class="btn btn-falcon-primary" type="button">Connect</button>
                                             </div>
                                         </div>
                                     </div>
@@ -782,8 +772,7 @@
                                             class="fas fa-ellipsis-h fs--2"></span></button>
                                     <div class="dropdown-menu dropdown-menu-end border py-2"
                                         aria-labelledby="dropdown-session-by-browser"><a class="dropdown-item"
-                                            href="#!">View</a><a class="dropdown-item"
-                                            href="#!">Export</a>
+                                            href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
                                             href="#!">Remove</a>
                                     </div>
@@ -844,8 +833,8 @@
                                             <tr>
                                                 <td class="py-3">
                                                     <div class="d-flex align-items-center"><img
-                                                            src="../assets/img/icons/firefox-logo.png"
-                                                            alt="" width="16" />
+                                                            src="../assets/img/icons/firefox-logo.png" alt=""
+                                                            width="16" />
                                                         <h6 class="text-600 mb-0 ms-2">Mozilla</h6>
                                                     </div>
                                                 </td>
@@ -899,8 +888,7 @@
                                             class="fas fa-ellipsis-h fs--2"></span></button>
                                     <div class="dropdown-menu dropdown-menu-end border py-2"
                                         aria-labelledby="dropdown-session-by-country"><a class="dropdown-item"
-                                            href="#!">View</a><a class="dropdown-item"
-                                            href="#!">Export</a>
+                                            href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
                                             href="#!">Remove</a>
                                     </div>
@@ -909,8 +897,8 @@
                             <div class="card-body">
                                 <!-- Find the JS file for the following chart at: src/js/charts/echarts/session-by-country-map.js-->
                                 <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/theme.js-->
-                                <div class="echart-session-by-country-map w-100 h-100"
-                                    data-echart-responsive="true"></div>
+                                <div class="echart-session-by-country-map w-100 h-100" data-echart-responsive="true">
+                                </div>
                                 <!-- Find the JS file for the following chart at: src/js/charts/echarts/session-by-country.js-->
                                 <!-- If you are not using gulp based workflow, you can find the transpiled code at: public/assets/js/theme.js-->
                                 <div class="echart-session-by-country h-100" data-echart-responsive="true"></div>
@@ -1002,8 +990,7 @@
                                             class="fas fa-ellipsis-h fs--2"></span></button>
                                     <div class="dropdown-menu dropdown-menu-end border py-2"
                                         aria-labelledby="dropdown-active-user-report"><a class="dropdown-item"
-                                            href="#!">View</a><a class="dropdown-item"
-                                            href="#!">Export</a>
+                                            href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
                                             href="#!">Remove</a>
                                     </div>
@@ -1106,8 +1093,7 @@
                                             class="fas fa-ellipsis-h fs--2"></span></button>
                                     <div class="dropdown-menu dropdown-menu-end border py-2"
                                         aria-labelledby="dropdown-campaign-perfomance"><a class="dropdown-item"
-                                            href="#!">View</a><a class="dropdown-item"
-                                            href="#!">Export</a>
+                                            href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
                                         <div class="dropdown-divider"></div><a class="dropdown-item text-danger"
                                             href="#!">Remove</a>
                                     </div>
@@ -1470,7 +1456,8 @@
                         <div class="col-12 col-sm-auto text-center">
                             <p class="mb-0 text-600">Thank you for creating with Falcon <span
                                     class="d-none d-sm-inline-block">| </span><br class="d-sm-none" /> 2021 &copy;
-                                <a href="https://themewagon.com">Themewagon</a></p>
+                                <a href="https://themewagon.com">Themewagon</a>
+                            </p>
                         </div>
                         <div class="col-12 col-sm-auto text-center">
                             <p class="mb-0 text-600">v3.4.0</p>
