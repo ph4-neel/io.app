@@ -27,6 +27,11 @@ class HomeController extends Controller
     //  View Routes================================================================================>
 
 
+    public function api() {
+
+        return view('api.api');
+    }
+
     public function home_view()
     {
 
@@ -81,10 +86,7 @@ class HomeController extends Controller
         return view('admin.soft_skills');
     }
 
-    public function api_view(){
 
-        return view('api.api');
-    }
 
 
 
@@ -158,7 +160,7 @@ class HomeController extends Controller
         return Redirect('login');
     }
 
-    // user Authentication=====================================================================>
+    // Admin Authentication=====================================================================>
 
 
 
@@ -222,5 +224,18 @@ class HomeController extends Controller
 
     }
 
+    public function destroy_skills($id)
+    {
+        $student = Skills::find($id);
+        $student->delete();
+        return redirect()->back()->with('status','Student Deleted Successfully');
+    }
+
     //skill controller=========================================================================>
+
+
+    //consumer Authentication==================================================================>
+
+
+
 }

@@ -420,7 +420,7 @@
                                                     <td>{{$items->features}}</td>
                                                     <td>{{$items->tags}}</td>
                                                     <td>{{$items->details}}</td>
-                                                    <td><a href="" class="btn btn-primary">delete</a></td>
+                                                    <td><a href="{{ url('get_del/'.$items->id) }}" class="btn btn-primary">delete</a></td>
                                                     <td><a href="" class="btn btn-success">Update</a></td>
                                                 </tr>
 

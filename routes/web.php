@@ -11,6 +11,10 @@ Route::get('/Soft_skills',[ApiController::class,'get_SoftSkills'])->name('get_So
 Route::get('/Hard_skills',[ApiController::class,'GetHardSkills'])->name('GetHardSkills');
 Route::get('/consumers',[ApiController::class,'getConsumers'])->name('get_consumers');
 
+Route::get('/apis',[HomeController::class,'api'])->name('apis');
+
+
+
 Route::get('consumers_id/{id}',[ApiController::class,'getConsumers_id'])->name('get_consumers_id');
 Route::get('Soft_skills_id/{id}',[ApiController::class,'get_SoftSkills_id'])->name('get_SoftSkills_id');
 
@@ -24,6 +28,7 @@ Route::get('Soft_skills_id/{id}',[ApiController::class,'get_SoftSkills_id'])->na
 
 
 Route::get('get_data/{id}', [HomeController::class, 'getId']);
+Route::get('get_del/{id}', [HomeController::class, 'destroy_skills']);
 
 //view Routes
 Route::get('/',[HomeController::class,'home_view']) ->name('home_view');
