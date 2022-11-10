@@ -73,6 +73,28 @@ class HomeController extends Controller
 
         return view('auth.admin_login');
     }
+    public function enterprise_login()
+    {
+
+        return view('auth.enterprise_login');
+    }
+    public function institute_login()
+    {
+
+        return view('auth.institute_login');
+    }
+
+    public function company_login()
+    {
+
+        return view('auth.company_login');
+    }
+
+    public function course_page()
+    {
+
+        return view('auth.course_page');
+    }
 
     public function soft()
     {
@@ -85,6 +107,18 @@ class HomeController extends Controller
 
         return view('admin.soft_skills');
     }
+
+
+    public function profile_view()
+    {
+        return view('layouts.profile');
+    }
+
+    public function customerdetail_view()
+    {
+        return view('layouts.customerdetail');
+    }
+
 
 
 

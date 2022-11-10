@@ -36,6 +36,10 @@ Route::get('/analytics', [HomeController::class, 'analytics_view']);
 Route::get('/soft',[HomeController::class,'getAll_Skills']);
 Route::get('/data_entry',[HomeController::class,'data']);
 Route::get('/soft_list',[HomeController::class,'get_Skills_List']) ->name('soft_list');
+Route::get('/profile',[HomeController::class,'profile_view']);
+Route::get('/customerdetail',[HomeController::class,'customerdetail_view']);
+
+
 
 
 
@@ -52,8 +56,29 @@ Route::post('custom-registration', [HomeController::class, 'customRegistration']
 Route::get('/admin_register',[HomeController::class,'admin_register']);
 Route::post('/admin_registers',[HomeController::class,'admin_registration']) ->name('admin_registration');
 
+Route::get('/company_register',[HomeController::class,'company_register']);
+Route::post('/company_registers',[HomeController::class,'company_registration']) ->name('company_registration');
+
+Route::get('/enterprise_register',[HomeController::class,'enterprise_register']);
+Route::post('/enterprise_registers',[HomeController::class,'enterprise_registration']) ->name('enterprise_registration');
+
+Route::get('/institute_register',[HomeController::class,'institute_register']);
+Route::post('/institute_registers',[HomeController::class,'institute_registration']) ->name('institute_registration');
+
 Route::get('/admin_login',[HomeController::class,'admin_login']) ->name('admin_login');
 Route::post('/admin_login',[HomeController::class,'admin_logins']) ->name('admin_logins');
+
+Route::get('/company_login',[HomeController::class,'company_login']) ->name('company_login');
+Route::post('/company_login',[HomeController::class,'company_logins']) ->name('company_logins');
+
+Route::get('/enterprise_login',[HomeController::class,'enterprise_login']) ->name('enterprise_login');
+Route::post('/enterprise_login',[HomeController::class,'enterprise_logins']) ->name('enterprise_logins');
+
+Route::get('/institute_login',[HomeController::class,'institute_login']) ->name('institute_login');
+Route::post('/institute_login',[HomeController::class,'institute_logins']) ->name('institute_logins');
+
+Route::get('/course_page',[HomeController::class,'course_page']) ->name('course_page');
+Route::post('/course_page',[HomeController::class,'course_pages']) ->name('course_pages');
 // Admin Auth=============================================================================================>
 
 
@@ -79,4 +104,5 @@ Route::get('signout', [HomeController::class, 'signOut'])->name('signout');
 
 
 Route::post('/data_entry',[HomeController::class,'Skill_post']) ->name('data_entry');
+//profile===========================================================================>
 
