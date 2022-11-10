@@ -29,7 +29,6 @@ Route::get('Soft_skills_id/{id}', [ApiController::class, 'get_SoftSkills_id'])->
 //Api for App==============================================================================>
 
 
-//for testing
 
 
 
