@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AdminAuth;
 use App\Models\ClientData;
+use App\Models\Consumers;
+use App\Models\ConsumersDetails;
 use App\Models\Instructor;
 use App\Models\Instructor_profile;
 use App\Models\Skills;
@@ -16,8 +18,10 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
 
+
 class HomeController extends Controller
 {
+
 
 
 
@@ -26,8 +30,20 @@ class HomeController extends Controller
 
     //  View Routes================================================================================>
 
+    public function consumer_Register_view()
+    {
 
-    public function api() {
+        return view('auth.consumer_register');
+    }
+
+    public function consumer_login_view()
+    {
+
+        return view('auth.consumer_login');
+    }
+
+    public function api()
+    {
 
         return view('api.api');
     }
@@ -38,7 +54,8 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function data(){
+    public function data()
+    {
 
         return view('admin.data_entry');
     }
@@ -180,9 +197,9 @@ class HomeController extends Controller
         $skills->tags = $request['tags'];
         $skills->details = $request['details'];
 
-        $result=$skills->save();
+        $result = $skills->save();
 
-        if($result){
+        if ($result) {
             return view('layouts.analytics');
         }
     }
@@ -220,15 +237,13 @@ class HomeController extends Controller
         $data = compact('skills');
 
         return view('skill_detail')->with($data);
-
-
     }
 
     public function destroy_skills($id)
     {
         $student = Skills::find($id);
         $student->delete();
-        return redirect()->back()->with('status','Student Deleted Successfully');
+        return redirect()->back()->with('status', 'Student Deleted Successfully');
     }
 
     //skill controller=========================================================================>
@@ -236,6 +251,109 @@ class HomeController extends Controller
 
     //consumer Authentication==================================================================>
 
+    public function ConsumerRegistration(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:consumers',
+            'username' => 'required',
+            'password' => 'required|min:6',
+        ]);
+
+        $data = $request->all();
+
+        $check = $this->Consumers_create($data);
 
 
+        return redirect("consumer_login")->withSuccess('You have signed-in');
+    }
+
+
+    public function Consumers_create(array $data)
+    {
+        return Consumers::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'username' => $data['username'],
+            'password' => Hash::make($data['password'])
+
+
+        ]);
+    }
+
+
+
+
+    public function dashboards()
+    {
+        if (Auth::check()) {
+            return view('dashboard');
+        }
+
+        return redirect("consumer_login")->withSuccess('You are not allowed to access');
+    }
+
+
+    public function Consumers_login(Request $request)
+    {
+
+        $request->validate([
+            'email' => 'required:',
+            'password' => 'required',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        $name=$request->only('name');
+
+        if (Auth::attempt($credentials)) {
+
+           $id= Auth::id();
+
+
+
+
+
+           return view('layouts.analytics')->with($id);
+        }
+
+
+
+
+        return redirect("login")->withSuccess('Login details are not valid');
+    }
+
+
+    public function get_Consumers_List()
+    {
+
+        $consumers = Consumers::all();
+
+        $data = compact('consumers');
+
+        return view('admin.consumers')->with($data);
+    }
+
+
+    public static function set_consumer_profile() {
+
+        $consumers=Consumers::all();
+
+        $data=compact('consumers');
+
+        return view('consumer_profile')->with($data);
+    }
+
+    public function getEmail(Request $request){
+
+        $e = $request['email'];
+        $consumer= Consumers::where('email', '=',$e)->get('name');
+        echo "<pre>";
+        $data = compact('consumer');
+
+        return view('consumer_profile')->with($data);
+
+
+
+    }
 }

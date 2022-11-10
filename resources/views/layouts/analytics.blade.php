@@ -68,6 +68,11 @@
                 <div class="d-flex align-items-center">
                     <div class="toggle-icon-wrapper">
 
+
+
+
+
+
                         <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle"
                             data-bs-toggle="tooltip" data-bs-placement="left" title="Toggle Navigation"><span
                                 class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
@@ -137,6 +142,15 @@
                                 </a>
                                 <!-- more inner pages-->
                             </li>
+
+
+                            <li class="nav-item"><a class="nav-link" href="{{ url('/consumers_list') }}"
+                                aria-expanded="false">
+                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Consumers List</span>
+                                </div>
+                            </a>
+                            <!-- more inner pages-->
+                        </li>
                                 </ul>
                             </li>
                             <li class="nav-item">

@@ -4,22 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\InsAuth as Ins;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-
-class Instructor_profile extends Model
+class Consumers extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'instructor_profiles';
-    protected $primarykey = "profile_id";
+    protected $primaryKey='admin_id';
 
-    public function GetProfile(){
+    protected $secondaryKey='name';
 
-        return $this->hasOne("App\Models\Instructor","instructor_id");
-
-    }
+    protected $table='Consumers';
 
     /**
      * The attributes that are mass assignable.
@@ -27,10 +23,10 @@ class Instructor_profile extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-        'position',
-        'introduction',
-        'experience',
-        'expertise',
+        'name',
+        'email',
+        'username',
+        'password',
     ];
 
     /**

@@ -8,6 +8,11 @@
 </head>
 <body>
 
-<h1>{{}}</h1>
+    <form action="{{ route('getEmails') }}"method="post">
+        @csrf
+        <input type="text" name="email">
+        <button  type="submit" name="submit">submit</button>
+    </form>
+
 </body>
 </html>

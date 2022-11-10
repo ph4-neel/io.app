@@ -4,15 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\InsAuth as Ins;
 use Illuminate\Notifications\Notifiable;
 
-class Instructor extends Model
+class ConsumersDetails extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'instructors';
-    protected $primarykey="instructor_id";
+    protected $primaryKey='id';
+
+    protected $table='consumers_details';
 
     /**
      * The attributes that are mass assignable.
@@ -22,8 +22,10 @@ class Instructor extends Model
     protected $fillable = [
         'name',
         'email',
-        'username',
-        'password',
+        'age',
+        'occupation',
+        'wanting_job',
+        'address'
     ];
 
     /**

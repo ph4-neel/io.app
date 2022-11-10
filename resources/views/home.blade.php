@@ -184,10 +184,8 @@
                                         class="dropdown-item link-600 fw-medium"
                                         href="{{ url('/admin_register') }}">Admin
                                         Register</a>
-                                    <a class="dropdown-item link-600 fw-medium"
-                                        href="{{ url('/instituteregister') }}">Instrecter Register</a>
-                                    <a class="dropdown-item link-600 fw-medium"
-                                        href="{{ url('/enterpriseregister') }}">Enterprise Register</a>
+                                        <a class="dropdown-item link-600 fw-medium"
+                                        href="{{ url('/consumer_register') }}">Cosumer Register</a>
                                     <a class="dropdown-item link-600 fw-medium"
                                         href="{{ url('/companyregister') }}">Company Register</a>
 
@@ -205,7 +203,7 @@
                                         href="{{ url('/admin_login') }}">Admin
                                         Login</a>
                                     <a class="dropdown-item link-600 fw-medium"
-                                        href="{{ url('/instituteregister') }}">Instrecter Register</a>
+                                        href="{{ url('/consumer_login') }}">Consumers Login</a>
                                     <a class="dropdown-item link-600 fw-medium"
                                         href="{{ url('/enterpriseregister') }}">Enterprise Register</a>
                                     <a class="dropdown-item link-600 fw-medium"
@@ -289,7 +287,7 @@
         <section class="py-0 overflow-hidden light" id="banner">
 
             <div class="bg-holder overlay">
-                <img class="img-fluid" src="{{ asset('/images/pic.jpg') }}" alt="" />
+                <img class="img-fluid" src="{{ asset('images/background_page-0001.jpg') }}" alt="" />
             </div>
             <!--/.bg-holder-->
 

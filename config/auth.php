@@ -42,9 +42,9 @@ return [
             'provider' => 'users',
         ],
 
-        'consumer' => [
+        'consumers' => [
             'driver' => 'session',
-            'provider' => 'client_data',
+            'provider' => 'Consumers',
         ],
     ],
 
@@ -76,7 +76,7 @@ return [
 
         'consumers' => [
             'driver' => 'eloquent',
-            'model' => App\Models\ClientData::class,
+            'model' => App\Models\Consumers::class,
         ],
 
     ],

@@ -8,6 +8,19 @@
 </head>
 <body>
 
-<h1>{{}}</h1>
+
+    @foreach ($consumer as $items )
+
+    @endforeach
+
+    <h1></h1>
+    <form action="">
+
+
+
+        <input type="text" value="{{$items->name}}" disabled name="email">
+        <input type="text" name="occupation">
+    </form>
+
 </body>
 </html>
