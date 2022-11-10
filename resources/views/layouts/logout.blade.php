@@ -15,6 +15,24 @@
     <link rel="stylesheet" href="{{ asset('css/ ser-rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/user-rtl.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/user.min.css') }}">
+    <title>Upto 64 Letters</title>
+    <meta name="description" content="Transform your Universities & Institutions with high-quality, job-relevant online courses from leading corporates and companies. Deliver world-class learning to your students, alumni, faculty, and staff." />
+    <link rel="canonical" href="https://www.interviewo.app/Universities & Institutions/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Teach your students the skills of the future" />
+    <meta property="og:description" content="interviewo for Universities & Institutions empowers any university to offer job-relevant, credit-ready online education to students, faculty, and staff." />
+    <meta property="og:url" content="https://www.interviewo.app/" />
+    <meta property="og:site_name" content="interviewo for Universities & Institutions" />
+    <meta property="article:modified_time" content="2022-09-27T15:35:30+00:00" />
+    <meta property="og:image" content="https://149343988.v2.pressablecdn.com/wp-content/uploads/iStock-1226994628-min.jpg" />
+    <meta property="og:image:width" content="2121" />
+    <meta property="og:image:height" content="1414" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Teach your students the skills of the future" />
+    <meta name="twitter:description" content="interviewo for Universities & Institutions empowers any university to offer job-relevant, credit-ready online education to students, faculty, and staff." />
+    <meta name="twitter:image" content="https://149343988.v2.pressablecdn.com/wp-content/uploads/iStock-1226994628-min.jpg" />
 
 <body>
 
@@ -35,14 +53,14 @@
                 <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4"><a class="d-flex flex-center mb-4" href="../../../index.html"><img class="me-2" src="../../../assets/img/icons/spot-illustrations/falcon.png" alt="" width="0" /><span class="font-sans-serif fw-bolder fs-5 d-inline-block">Interviewo</span></a>
                     <div class="card">
                         <div class="card-body p-4 p-sm-5">
-                           
-                                <h4>See you again!</h4>
-                                <p>Thanks for using Interviewo.app  You are <br />now successfully Logged out.</p><a class="btn btn-primary btn-sm mt-3" href="../../../pages/authentication/simple/login.html"><span class="fas fa-chevron-left me-1" data-fa-transform="shrink-4 down-1"></span>Return to Login</a>
-                            </div>
+
+                            <h4>See you again!</h4>
+                            <p>Thanks for using Interviewo.app You are <br />now successfully Logged out.</p><a class="btn btn-primary btn-sm mt-3" href="../../../pages/authentication/simple/login.html"><span class="fas fa-chevron-left me-1" data-fa-transform="shrink-4 down-1"></span>Return to Login</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
     <!-- ===============================================-->
