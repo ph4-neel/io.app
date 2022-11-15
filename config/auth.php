@@ -18,7 +18,6 @@ return [
         'passwords' => 'users',
     ],
 
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -41,15 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
-        'consumers' => [
-            'driver' => 'session',
-            'provider' => 'Consumers',
-        ],
     ],
-
-
-
 
     /*
     |--------------------------------------------------------------------------
@@ -71,14 +62,13 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\AdminAuth::class,
+            'model' => App\Models\User::class,
         ],
 
-        'consumers' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Consumers::class,
-        ],
-
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
     ],
 
     /*
