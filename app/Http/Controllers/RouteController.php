@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 class RouteController extends Controller
 {
     //
-
-    public function Home_View()
+    public function Homepage_View()
     {
-        return view('Pages.Home');
+        return view('pages.Homepage');
     }
 }
