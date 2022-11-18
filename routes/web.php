@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 //Routes============================================================>
 Route::get('/',[RouteController::class,'Home_View'])->name('Home');
+
+
+Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
+Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('User_DashBoard');
