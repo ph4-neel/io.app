@@ -19,4 +19,6 @@ class RouteController extends Controller
     {
         return view('pages.Coursedetail');
     }
+
+
 }

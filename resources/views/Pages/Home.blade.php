@@ -8,5 +8,10 @@
 </head>
 <body>
     <h1>this is home Page</h1>
+    <video width="320" height="240" controls>
+        <source src="https://youtu.be/JIktIGJLBAU" type="video/mp4">
+        <source src="{{ URL::asset('movie.ogg') }}" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
 </body>
 </html>
