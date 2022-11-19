@@ -72,7 +72,7 @@
                     <li><a href="blog.html">Team</a></li>
                     <li class="dropdown"><a href="#"><span>Join Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                            <li><a href="#">Drop Down</a></li>
+                            <li><a href="#">pages</a></li>
                             <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                                 <ul>
                                     <li><a href="#">Institute Login</a></li>
@@ -891,7 +891,7 @@
                             <p class="post-category">Politics</p>
 
                             <h2 class="title">
-                                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                                <a href="Coursedetail.blade.php">Dolorum optio tempore voluptas dignissimos</a>
                             </h2>
 
                             <div class="d-flex align-items-center">
@@ -917,7 +917,7 @@
                             <p class="post-category">Sports</p>
 
                             <h2 class="title">
-                                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                                <a href="Coursedetail.blade.php">Nisi magni odit consequatur autem nulla dolorem</a>
                             </h2>
 
                             <div class="d-flex align-items-center">
@@ -943,7 +943,7 @@
                             <p class="post-category">Entertainment</p>
 
                             <h2 class="title">
-                                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                                <a href="Coursedetail.blade.php">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
                             </h2>
 
                             <div class="d-flex align-items-center">

@@ -11,4 +11,12 @@ class RouteController extends Controller
     {
         return view('pages.Homepage');
     }
+    public function Coursepage_View()
+    {
+        return view('pages.Coursepage');
+    }
+    public function Coursedetail_View()
+    {
+        return view('pages.Coursedetail');
+    }
 }

@@ -18,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 //Routes============================================================>
 
 Route::get('/',[RouteController::class,'Homepage_View'])->name('Homepage');
+Route::get('/course',[RouteController::class,'Coursepage_View'])->name('Coursepage');
+Route::get('/coursedetail',[RouteController::class,'Coursedetail_View'])->name('Coursedetail');
+
