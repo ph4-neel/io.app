@@ -20,5 +20,12 @@ class RouteController extends Controller
         return view('pages.Coursedetail');
     }
 
+    public function error_pages()
+    {
+        return view('pages.error');
+    }
+
+    
+
 
 }

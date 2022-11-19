@@ -65,7 +65,17 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">Courses</a></li>
+                   
+                    <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                        <ul>
+                            <li><a href="#">Institute Login</a></li>
+                            <li><a href="#">Instructor Login</a></li>
+                            <li><a href="#">Enterprise Login</a></li>
+                            <li><a href="#">Company Login</a></li>
+                            <li><a href="#">Universities Login</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="#services">Skills</a></li>
                   
                     <li class="dropdown"><a href="#"><span>Join Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -85,8 +95,12 @@
                             <li><a href="#">Hard Skills</a></li>
                         </ul>
                     </li>
+
                     <li><a href="#contact">Contact</a></li>
+
                     <li><a href="{{ asset('User_Register') }}">Register</a></li>
+                    
+                    <li><a href="{{ asset('User_Login') }}">Login</a></li>
                     
                    
                 </ul>

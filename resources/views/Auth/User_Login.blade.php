@@ -12,7 +12,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Falcon | Dashboard &amp; Web App Template</title>
+    <title>InterviewO.App</title>
 
 
     <!-- ===============================================-->
@@ -80,39 +80,36 @@
                       </div>
                       <!--/.bg-holder-->
 
-                      <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="../../../index.html">falcon</a>
+                      <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="../../../index.html">InterviewO</a>
                         <p class="opacity-75 text-white">With the power of Falcon, you can now focus only on functionaries for your digital products, while leaving the UI design on us!</p>
                       </div>
                     </div>
                     <div class="mt-3 mb-4 mt-md-4 mb-md-5 light">
-                      <p class="pt-3 text-white">Have an account?<br><a class="btn btn-outline-light mt-2 px-4" href="../../../pages/authentication/card/login.html">Log In</a></p>
+                      <p class="pt-3 text-white"><br><a class="btn btn-outline-light mt-2 px-4" href="{{url('/')}}">Home</a></p>
                     </div>
                   </div>
                   <div class="col-md-7 d-flex flex-center">
                     <div class="p-4 p-md-5 flex-grow-1">
-                      <h3>Register</h3>
-                      <form>
+                      <h3>Login</h3>
+                      <form class=" needs-validation" novalidate>
                       
                         <div class="mb-3">
                           <label class="form-label" for="card-email">Email address</label>
-                          <input class="form-control" type="email" autocomplete="on" id="card-email" />
+                          <input class="form-control" name="email" type="text" autocomplete="on" id="card-email" required />
                         </div>
                         <div class="row gx-2">
                           <div class="mb-3 col-sm-6">
                             <label class="form-label" for="card-password">Password</label>
-                            <input class="form-control" type="password" autocomplete="on" id="card-password" />
+                            <input class="form-control" name="password" type="password" autocomplete="on" id="card-password" required/>
                           </div>
-                          <div class="mb-3 col-sm-6">
-                            <label class="form-label" for="card-confirm-password">Confirm Password</label>
-                            <input class="form-control" type="password" autocomplete="on" id="card-confirm-password" />
-                          </div>
+                         
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="card-register-checkbox" />
+                          <input class="form-check-input" name="name" type="checkbox" id="card-register-checkbox" required />
                           <label class="form-label" for="card-register-checkbox">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label>
                         </div>
                         <div class="mb-3">
-                          <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Register</button>
+                          <button class="btn btn-primary d-block w-100 mt-3" name="name" type="submit" name="submit" >Login</button>
                         </div>
                       </form>
                       <div class="position-relative mt-4">
@@ -258,6 +255,38 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="../../../vendors/list.js/list.min.js"></script>
     <script src="../../../assets/js/theme.js"></script>
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+
+    <SCript>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
+    </SCript>
+
+  
 
   </body>
 

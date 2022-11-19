@@ -25,3 +25,7 @@ Route::get('/coursedetail',[RouteController::class,'Coursedetail_View'])->name('
 Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
 Route::get('/User_Login',[UserController::class,'User_Login_View'])->name('User_Login');
 Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('User_DashBoard');
+
+// <===Error==>
+Route::get('/error',[RouteController::class,'error_pages'])->name('error');
+// <===Error==>
