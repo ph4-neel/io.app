@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Template Main CSS File -->
-    
+
     <link rel="stylesheet" href="{{ asset('css/Homepage.css') }}">
 
 
@@ -26,10 +26,10 @@
     <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-   
 
-    
-    
+
+
+
 
     <title>Io.app</title>
 </head>
@@ -1130,7 +1130,7 @@
     <script src="{{ asset('vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
 
-    
+
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>

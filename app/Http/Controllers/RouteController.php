@@ -7,10 +7,17 @@ use Illuminate\Http\Request;
 class RouteController extends Controller
 {
     //
-
-    public function Home_View()
+    public function Homepage_View()
     {
         return view('pages.Homepage');
+    }
+    public function Coursepage_View()
+    {
+        return view('pages.Coursepage');
+    }
+    public function Coursedetail_View()
+    {
+        return view('pages.Coursedetail');
     }
 
 
