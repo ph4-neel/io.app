@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use function Ramsey\Uuid\v1;
+
 class UserController extends Controller
 {
     //User register And Login===========================================>
@@ -21,20 +23,21 @@ class UserController extends Controller
     }
 
 
-    public function Error (){
-
-
+    public function Error_Page()
+    {
 
     }
 
-    public function Register()
+    public function Register(Request $request)
     {
 
-        $valiDateData = request()->validate([
+        $valiDateData = $request->validate([
 
             'name' => 'required',
             'username' => 'required|unique:users',
             'email' => 'required|unique:users',
+            'phone' => 'required',
+            'types' => 'required',
             'password' => 'required'
         ]);
 
@@ -43,7 +46,7 @@ class UserController extends Controller
 
         auth()->login($Users);
 
-        return redirect('/');
+        return view('Pages.Homepage');
     }
 
 
@@ -55,5 +58,12 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+    }
+
+    public function Logout()
+    {
+        auth()->logout();
+        return view('Pages.Homepage');
+
     }
 }
