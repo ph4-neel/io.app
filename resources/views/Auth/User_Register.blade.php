@@ -34,7 +34,7 @@
     <!-- ===============================================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
-   
+
 
     <link href="{{ asset('css/overlayscrollbars/OverlayScrollbars.min.cs') }}" rel="stylesheet">
     <link href="{{ asset('css/css/theme-rtl.min.css') }}" rel="stylesheet">
@@ -91,31 +91,42 @@
                   <div class="col-md-7 d-flex flex-center">
                     <div class="p-4 p-md-5 flex-grow-1">
                       <h3>Register</h3>
-                      <form>
+                      <form method="POST" action="/User_Registers">
+                        @csrf
                         <div class="mb-3">
                           <label class="form-label" for="card-name">Name</label>
-                          <input class="form-control" type="text" autocomplete="on" id="card-name" />
+                          <input class="form-control" type="text" name="name" autocomplete="on" id="card-name" required />
                         </div>
                         <div class="mb-3">
                           <label class="form-label" for="card-name">Usarname</label>
-                          <input class="form-control" type="text" autocomplete="on" id="card-name" />
+                          <input class="form-control" type="text" name="username" autocomplete="on" id="card-name" required />
                         </div>
                         <div class="mb-3">
+                            <label class="form-label" for="card-name">Phone</label>
+                            <input class="form-control" type="text" name="phone" autocomplete="on" id="card-name" required />
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label" for="card-name">Types</label>
+                            <select class="form-control" type="text" name="types" autocomplete="on" id="card-name" required>
+                                <option value="student">Student</option>
+                                <option value="instructor">instructor</option>
+                                <option value="institute">Institute</option>
+                                <option value="enterPrices">Enterprices</option>
+                            </select>
+                          </div>
+                        <div class="mb-3">
                           <label class="form-label" for="card-email">Email address</label>
-                          <input class="form-control" type="email" autocomplete="on" id="card-email" />
+                          <input class="form-control" type="email" name="email" autocomplete="on" id="card-email" required />
                         </div>
                         <div class="row gx-2">
                           <div class="mb-3 col-sm-6">
                             <label class="form-label" for="card-password">Password</label>
-                            <input class="form-control" type="password" autocomplete="on" id="card-password" />
+                            <input class="form-control" type="password" name="password" autocomplete="on" id="card-password" required />
                           </div>
-                          <div class="mb-3 col-sm-6">
-                            <label class="form-label" for="card-confirm-password">Confirm Password</label>
-                            <input class="form-control" type="password" autocomplete="on" id="card-confirm-password" />
-                          </div>
+
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="card-register-checkbox" />
+                          <input class="form-check-input" type="checkbox" id="card-register-checkbox" required />
                           <label class="form-label" for="card-register-checkbox">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label>
                         </div>
                         <div class="mb-3">

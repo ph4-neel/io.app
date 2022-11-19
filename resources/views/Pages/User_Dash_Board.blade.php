@@ -111,7 +111,15 @@
     </nav>
 
     <section class="home">
+        @auth
+
+
+        <div class="text">{{auth()->user()->name}}</div>
+        @else
+
         <div class="text">Dashboard Sidebar</div>
+
+        @endauth
 
         <div class="container">
 

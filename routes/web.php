@@ -19,10 +19,9 @@ use Illuminate\Support\Facades\Route;
 //Routes============================================================>
 
 Route::get('/',[RouteController::class,'Homepage_View'])->name('Homepage');
-Route::get('/course',[RouteController::class,'Coursepage_View'])->name('Coursepage');
-Route::get('/coursedetail',[RouteController::class,'Coursedetail_View'])->name('Coursedetail');
 
 Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
+Route::post('/User_Registers',[UserController::class,'Register'])->name('User_Registers');
 Route::get('/User_Login',[UserController::class,'User_Login_View'])->name('User_Login');
 Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('User_DashBoard');
 
