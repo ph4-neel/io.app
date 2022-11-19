@@ -33,7 +33,9 @@ class UserController extends Controller
         ]);
 
 
-        User::create($valiDateData);
+        $Users = User::create($valiDateData);
+
+        auth()->login($Users);
 
         return redirect('/');
     }
