@@ -21,4 +21,5 @@ Route::get('/',[RouteController::class,'Home_View'])->name('Home');
 
 
 Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
+Route::get('/User_Login',[UserController::class,'User_Login_View'])->name('User_Login');
 Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('User_DashBoard');

@@ -67,9 +67,7 @@
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#about">Courses</a></li>
                     <li><a href="#services">Skills</a></li>
-                    <li><a href="#portfolio">Pages</a></li>
-                    <li><a href="#team">Institute</a></li>
-                    <li><a href="blog.html">Team</a></li>
+                  
                     <li class="dropdown"><a href="#"><span>Join Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             <li><a href="#">Drop Down</a></li>
@@ -88,6 +86,9 @@
                         </ul>
                     </li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="{{ asset('User_Register') }}">Register</a></li>
+                    
+                   
                 </ul>
             </nav><!-- .navbar -->
 
