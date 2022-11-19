@@ -21,6 +21,12 @@ class UserController extends Controller
     }
 
 
+    public function Error (){
+
+
+
+    }
+
     public function Register()
     {
 
