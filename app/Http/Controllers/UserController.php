@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use function Ramsey\Uuid\v1;
+
 class UserController extends Controller
 {
     //User register And Login===========================================>
@@ -15,35 +17,49 @@ class UserController extends Controller
         return view('Auth.User_Register');
     }
 
+
+    public function User_Login_View()
+    {
+        return view('Auth.User_Login');
+    }
+
+    }
+
+    public function Error_Page()
+
+    {
+        return view('Pages.error');
+    }
+
+    }
+
+
     public function User_DashBoard()
     {
         return view('Pages.User_Dash_Board');
     }
 
 
-    public function Error (){
-
-
-
-    }
-
-    public function Register()
+    public function Register(Request $request)
     {
 
-        $valiDateData = request()->validate([
+        $valiDateData = $request->validate([
 
             'name' => 'required',
             'username' => 'required|unique:users',
             'email' => 'required|unique:users',
+            'phone' => 'required',
+            'types' => 'required',
             'password' => 'required'
         ]);
 
 
-        $Users = User::create($valiDateData);
+       $Users = User::create($valiDateData);
 
-        auth()->login($Users);
+       auth()->login($Users);
 
-        return redirect('/');
+        return view('Pages.Homepage');
+
     }
 
 
@@ -55,5 +71,12 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+    }
+
+    public function Logout()
+    {
+        auth()->logout();
+        return view('Pages.Homepage');
+
     }
 }

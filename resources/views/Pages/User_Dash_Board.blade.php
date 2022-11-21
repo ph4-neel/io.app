@@ -40,15 +40,10 @@
                 </li>
 
                 <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-home-alt icon'></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-                    </li>
+                    
 
-                    <li class="nav-link">
-                        <a href="#">
+                    <li class="class='bx bx-home-alt icon'">
+                        <a href="{{ asset('Profile') }}">
                             <i class='bx bx-profile icon'></i>
                             <span class="text nav-text">Profile</span>
                         </a>
@@ -111,7 +106,18 @@
     </nav>
 
     <section class="home">
+        @auth
+
+
+        <div class="text">{{auth()->user()->name}}</div>
+        @else
+
         <div class="text">Dashboard Sidebar</div>
+
+        @endauth
+
+
+       
 
         <div class="container">
 

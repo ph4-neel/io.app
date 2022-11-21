@@ -19,11 +19,22 @@ use Illuminate\Support\Facades\Route;
 //Routes============================================================>
 
 Route::get('/',[RouteController::class,'Homepage_View'])->name('Homepage');
-Route::get('/course',[RouteController::class,'Coursepage_View'])->name('Coursepage');
-Route::get('/coursedetail',[RouteController::class,'Coursedetail_View'])->name('Coursedetail');
-Route::get('/index',[RouteController::class,'index_View'])->name('index');
-Route::get('/create',[RouteController::class,'create_View'])->name('create');
+Route::get('/Admin_Skills',[RouteController::class,'Skills']);
+
+Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
+Route::post('/User_Register',[UserController::class,'Register'])->name('User_Register');
+Route::get('/User_Login',[UserController::class,'User_Login_View'])->name('User_Login');
+Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('User_DashBoard');
+Route::get('/logout',[UserController::class,'Logout'])->name('Logout');
 
 
+Route::get('/admin',function(){
 
+    return view('admin.dashboard.index');
+});
 
+Route::get('/test',function(){
+
+    return view('Admin.Index');
+
+});
