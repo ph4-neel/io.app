@@ -20,11 +20,16 @@ class UserController extends Controller
 
     public function User_Login_View()
     {
+        return view('Auth.User_Login');
+    }
 
     }
 
     public function Error_Page()
+
     {
+        return view('Pages.error');
+    }
 
     }
 
@@ -54,6 +59,7 @@ class UserController extends Controller
        auth()->login($Users);
 
         return view('Pages.Homepage');
+
     }
 
 

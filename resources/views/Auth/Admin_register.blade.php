@@ -1,5 +1,9 @@
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -12,7 +16,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>InterviewO.App/User_Register</title>
+    <title>InterviewO.App/Admin_Register</title>
 
 
     <!-- ===============================================-->
@@ -85,7 +89,7 @@
                       </div>
                     </div>
                     <div class="mt-3 mb-4 mt-md-4 mb-md-5 light">
-                      <p class="pt-3 text-white">Have an account?<br><a class="btn btn-outline-light mt-2 px-4" href="{{ asset('User_Login') }}">Login</a></p>
+                      <p class="pt-3 text-white">Have an account?<br><a class="btn btn-outline-light mt-2 px-4" href="{{ asset('Admin_login') }}">Admin Login</a></p>
                     </div>
                   </div>
                   <div class="col-md-7 d-flex flex-center">
