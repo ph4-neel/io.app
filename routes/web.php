@@ -35,6 +35,11 @@ Route::get('/admin',function(){
 
 Route::get('/test',function(){
 
-    return view('Admin.Index');
+    return view('superadmin.admin');
+
+});
+Route::get('/edit',function(){
+
+    return view('superadmin.Createskill');
 
 });
