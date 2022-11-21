@@ -21,4 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[RouteController::class,'Homepage_View'])->name('Homepage');
 Route::get('/course',[RouteController::class,'Coursepage_View'])->name('Coursepage');
 Route::get('/coursedetail',[RouteController::class,'Coursedetail_View'])->name('Coursedetail');
+Route::get('/index',[RouteController::class,'index_View'])->name('index');
+Route::get('/create',[RouteController::class,'create_View'])->name('create');
+
+
+
 

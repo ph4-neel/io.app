@@ -19,6 +19,17 @@ class RouteController extends Controller
     {
         return view('pages.Coursedetail');
     }
+    public function index_View()
+    {
+        return view('admin.dashboard.index');
+    }
+    public function create_View()
+    {
+        return view('domain-skill.create');
+    }
+   
+
+
 
 
 }
