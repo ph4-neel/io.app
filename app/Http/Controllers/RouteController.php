@@ -20,9 +20,9 @@ class RouteController extends Controller
         return view('pages.Coursedetail');
     }
 
-    public function error_pages()
+    public function Skills()
     {
-        return view('pages.error');
+        return view('Admin.Skills');
     }
 
     public function Profile_pages()

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 //Routes============================================================>
 
 Route::get('/',[RouteController::class,'Homepage_View'])->name('Homepage');
+Route::get('/Admin_Skills',[RouteController::class,'Skills']);
 
 Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
 Route::post('/User_Register',[UserController::class,'Register'])->name('User_Register');
@@ -27,18 +28,13 @@ Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('Us
 Route::get('/logout',[UserController::class,'Logout'])->name('Logout');
 
 
-// <===Error==>
-Route::get('/error',[RouteController::class,'error_pages'])->name('error');
-// <===Error==>
+Route::get('/admin',function(){
 
-// <===Profile==>
-Route::get('/Profile',[RouteController::class,'Profile_pages'])->name('Profile');
-// <===Profile==>
+    return view('admin.dashboard.index');
+});
 
-// <===Admin login & register==>
-Route::get('/Admin_login',[RouteController::class,'Admin_login_Auth'])->name('Admin_login_Auth');
-Route::get('/Admin_register',[RouteController::class,'Admin_register_Auth'])->name('Admin_register_Auth');
-// <===Admin login & register==>
+Route::get('/test',function(){
 
+    return view('Admin.Index');
 
-
+});
