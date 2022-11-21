@@ -17,18 +17,21 @@ class UserController extends Controller
         return view('Auth.User_Register');
     }
 
+
+    public function User_Login_View()
+    {
+
+    public function Error_Page()
+    {
+
+    
     public function User_DashBoard()
     {
         return view('Pages.User_Dash_Board');
     }
 
 
-    public function Error_Page()
-    {
-
-    }
-
-    public function Register(Request $request)
+    public function Register()
     {
 
         $valiDateData = $request->validate([
@@ -42,9 +45,7 @@ class UserController extends Controller
         ]);
 
 
-        $Users = User::create($valiDateData);
-
-        auth()->login($Users);
+        User::create($valiDateData);
 
         return view('Pages.Homepage');
     }
