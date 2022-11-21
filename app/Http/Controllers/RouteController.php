@@ -20,5 +20,8 @@ class RouteController extends Controller
         return view('pages.Coursedetail');
     }
 
-
+    public function Skills()
+    {
+        return view('Admin.Skills');
+    }
 }

@@ -19,9 +19,22 @@ use Illuminate\Support\Facades\Route;
 //Routes============================================================>
 
 Route::get('/',[RouteController::class,'Homepage_View'])->name('Homepage');
+Route::get('/Admin_Skills',[RouteController::class,'Skills']);
 
 Route::get('/User_Register',[UserController::class,'User_Register_View'])->name('User_Register');
 Route::post('/User_Registers',[UserController::class,'Register'])->name('User_Registers');
 Route::get('/User_Login',[UserController::class,'User_Login_View'])->name('User_Login');
 Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('User_DashBoard');
 Route::get('/logout',[UserController::class,'Logout'])->name('Logout');
+
+
+Route::get('/admin',function(){
+
+    return view('admin.dashboard.index');
+});
+
+Route::get('/test',function(){
+
+    return view('Admin.Index');
+
+});
