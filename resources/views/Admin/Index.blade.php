@@ -76,7 +76,7 @@
                     <li class="nav-link">
                         <a href="#">
                             <i class='bx bx-heart icon'></i>
-                            <span class="text nav-text">Personal Development</span>
+                            <span class="text nav-text">Personal <br> Development</span>
                         </a>
                     </li>
                     <hr>
