@@ -12,7 +12,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>InterviewO.App/User_Register</title>
+    <title>InterviewO.App/Admin_login</title>
 
 
     <!-- ===============================================-->
@@ -34,7 +34,7 @@
     <!-- ===============================================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
-
+   
 
     <link href="{{ asset('css/overlayscrollbars/OverlayScrollbars.min.cs') }}" rel="stylesheet">
     <link href="{{ asset('css/css/theme-rtl.min.css') }}" rel="stylesheet">
@@ -80,57 +80,36 @@
                       </div>
                       <!--/.bg-holder-->
 
-                      <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="../../../index.html">falcon</a>
+                      <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="../../../index.html">InterviewO</a>
                         <p class="opacity-75 text-white">With the power of Falcon, you can now focus only on functionaries for your digital products, while leaving the UI design on us!</p>
                       </div>
                     </div>
                     <div class="mt-3 mb-4 mt-md-4 mb-md-5 light">
-                      <p class="pt-3 text-white">Have an account?<br><a class="btn btn-outline-light mt-2 px-4" href="{{ asset('User_Login') }}">Login</a></p>
+                      <p class="pt-3 text-white"><br><a class="btn btn-outline-light mt-2 px-4" href="{{url('/')}}">Home</a></p>
                     </div>
                   </div>
                   <div class="col-md-7 d-flex flex-center">
                     <div class="p-4 p-md-5 flex-grow-1">
-                      <h3>Register</h3>
-                      <form method="POST" action="/User_Registers">
-                        @csrf
-                        <div class="mb-3">
-                          <label class="form-label" for="card-name">Name</label>
-                          <input class="form-control" type="text" name="name" autocomplete="on" id="card-name" required />
-                        </div>
-                        <div class="mb-3">
-                          <label class="form-label" for="card-name">Usarname</label>
-                          <input class="form-control" type="text" name="username" autocomplete="on" id="card-name" required />
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="card-name">Phone</label>
-                            <input class="form-control" type="text" name="phone" autocomplete="on" id="card-name" required />
-                          </div>
-                          <div class="mb-3">
-                            <label class="form-label" for="card-name">Types</label>
-                            <select class="form-control" type="text" name="types" autocomplete="on" id="card-name" required>
-                                <option value="student">Student</option>
-                                <option value="instructor">instructor</option>
-                                <option value="institute">Institute</option>
-                                <option value="enterPrices">Enterprices</option>
-                            </select>
-                          </div>
+                      <h3>Admin Login</h3>
+                      <form class=" needs-validation" novalidate>
+                      
                         <div class="mb-3">
                           <label class="form-label" for="card-email">Email address</label>
-                          <input class="form-control" type="email" name="email" autocomplete="on" id="card-email" required />
+                          <input class="form-control" name="email" type="text" autocomplete="on" id="card-email" required />
                         </div>
                         <div class="row gx-2">
                           <div class="mb-3 col-sm-6">
                             <label class="form-label" for="card-password">Password</label>
-                            <input class="form-control" type="password" name="password" autocomplete="on" id="card-password" required />
+                            <input class="form-control" name="password" type="password" autocomplete="on" id="card-password" required/>
                           </div>
-
+                         
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="card-register-checkbox" required />
+                          <input class="form-check-input" name="name" type="checkbox" id="card-register-checkbox" required />
                           <label class="form-label" for="card-register-checkbox">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label>
                         </div>
                         <div class="mb-3">
-                          <button class="btn btn-primary d-block w-100 mt-3" type="submit" name="submit">Register</button>
+                          <button class="btn btn-primary d-block w-100 mt-3" name="name" type="submit" name="submit" >Login</button>
                         </div>
                       </form>
                       <div class="position-relative mt-4">
@@ -276,6 +255,38 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
     <script src="../../../vendors/list.js/list.min.js"></script>
     <script src="../../../assets/js/theme.js"></script>
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+
+    <SCript>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+
+    </SCript>
+
+  
 
   </body>
 

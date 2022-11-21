@@ -102,10 +102,8 @@
                     </li>
 
                     <li><a href="#contact">Contact</a></li>
-
-                    <li><a href="{{ asset('User_Register') }}">Register</a></li>
-                    
-                    <li><a href="{{ asset('User_Login') }}">Login</a></li>
+  
+                  
                     
                    
                     @auth
@@ -115,6 +113,7 @@
 
                     @else
                         <li><a href="{{ asset('User_Register') }}">Register</a></li>
+                        <li><a href="{{ asset('User_Login') }}">Login</a></li>
 
                     @endauth
 

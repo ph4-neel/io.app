@@ -25,6 +25,22 @@ class RouteController extends Controller
         return view('pages.error');
     }
 
+    public function Profile_pages()
+    {
+        return view('pages.Profile');
+    }
+
+    public function Admin_login_Auth()
+    {
+        return view('Auth.Admin_login');
+    }
+
+    public function Admin_register_Auth()
+    {
+        return view('Auth.Admin_Register');
+    }
+
+
     
 
 
