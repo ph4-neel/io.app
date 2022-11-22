@@ -23,15 +23,12 @@ class UserController extends Controller
         return view('Auth.User_Login');
     }
 
-    }
-
     public function Error_Page()
 
     {
         return view('Pages.error');
     }
 
-    }
 
 
     public function User_DashBoard()
@@ -71,6 +68,16 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+
+        if(auth()->attempt($valiDateData)){
+
+            return view('Pages.HomePage');
+        }
+
+        else{
+
+            return view('Auth.User_Login')->with("wrong");
+        }
     }
 
     public function Logout()

@@ -68,7 +68,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="#hero">Home</a></li>
-                   
+
                     <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             <li><a href="#">Institute Login</a></li>
@@ -102,10 +102,10 @@
                     </li>
 
                     <li><a href="#contact">Contact</a></li>
-  
-                  
-                    
-                   
+
+
+
+
                     @auth
 
                         <li><a href="{{ url('/User_DashBoard') }}">Welcome  {{ auth()->user()->name }}</a></li>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -28,10 +29,14 @@ Route::get('/User_DashBoard',[UserController::class,'User_DashBoard'])->name('Us
 Route::get('/logout',[UserController::class,'Logout'])->name('Logout');
 
 
-Route::get('/admin',function(){
+Route::get('/admins',[AdminController::class,'Admin_Login'])->name('Admin_Login');
+Route::post('/admin_login',[AdminController::class,'Login'])->name('admin_login');
 
-    return view('admin.dashboard.index');
-});
+
+// Route::get('/admin',function(){
+
+//     return view('admin.dashboard.index');
+// });
 
 Route::get('/test',function(){
 
