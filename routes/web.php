@@ -40,6 +40,11 @@ Route::post('/admin_login',[AdminController::class,'Login'])->name('admin_login'
 
 Route::get('/test',function(){
 
-    return view('Admin.Index');
+    return view('superadmin.admin');
+
+});
+Route::get('/edit',function(){
+
+    return view('superadmin.Createskill');
 
 });
