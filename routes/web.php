@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\UserController;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,19 +33,19 @@ Route::get('/logout',[UserController::class,'Logout'])->name('Logout');
 Route::get('/admins',[AdminController::class,'Admin_Login'])->name('Admin_Login');
 Route::post('/admin_login',[AdminController::class,'Login'])->name('admin_login');
 
+Route::get('/Super_admin',[AdminController::class,'Super_Admin']);
 
-// Route::get('/admin',function(){
+Route::post('/Save',[AdminController::class,'Save_Skills']);
 
-//     return view('admin.dashboard.index');
-// });
+Route::get('/Skills_add',function(){
+
+    return view('superadmin.Skills_Add');
+
+});
 
 Route::get('/test',function(){
 
     return view('superadmin.admin');
 
 });
-Route::get('/edit',function(){
 
-    return view('superadmin.Createskill');
-
-});

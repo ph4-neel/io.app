@@ -329,10 +329,10 @@
 
                 <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
                     <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Dashboard</h5>
+                        <h5 class="mb-0">Skill</h5>
                     </div>
                     <div class="col-auto d-flex align-items-center">
-                        <a href="{{url('/Skills_add')}}"
+                        <a href="https://interviewo.app/admin/master/skills/create"
                             class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
                                 class="fas fa-plus me-2"></span>Add Skill</a>
                     </div>
@@ -342,7 +342,36 @@
                 <div class="row g-3 mb-3">
                     <div class="col-md-12 col-xxl-12">
                         <div class="card h-md-100">
+                            <div class="card-header pb-0">
+                                <h6 class="mb-0 mt-2 d-flex align-items-center">Skills List</h6>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-end">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Skill Type</th>
+                                            <th>Title</th>
+                                            <th>Image</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>hello</td>
+                                            <td>hello</td>
+                                            <td>hello</td>
+                                            <td>hello</td>
 
+                                        </tr>
+
+
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
