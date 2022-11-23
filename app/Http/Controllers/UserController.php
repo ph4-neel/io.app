@@ -73,6 +73,7 @@ class UserController extends Controller
     {
         auth()->logout();
         return view('Pages.Homepage');
+        
 
     }
 }

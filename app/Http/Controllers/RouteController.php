@@ -40,8 +40,14 @@ class RouteController extends Controller
         return view('Auth.Admin_Register');
     }
 
+    public function blog_details_pages()
+    {
+        return view('pages.blog_details');
+    }
+  
+
 
     
-
+    
 
 }

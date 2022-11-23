@@ -29,11 +29,12 @@
     <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+ 
 
 
 
 
-    <title>Io.app</title>
+    <title>io.app</title>
 </head>
 
 <body>
@@ -68,8 +69,9 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a href="#hero">Home</a></li>
-                   
-                    <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+
+                    <li class="dropdown"><a href="#"><span>Courses</span> <i
+                                class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             <li><a href="#">Institute Login</a></li>
                             <li><a href="#">Instructor Login</a></li>
@@ -79,7 +81,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="#services">Skills</a></li>
+                    <li><a href="{{ url('/blog_details') }}">Skills</a></li>
 
                     <li class="dropdown"><a href="#"><span>Join Us</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -102,20 +104,21 @@
                     </li>
 
                     <li><a href="#contact">Contact</a></li>
-  
-                  
-                    
-                   
+
+
+
+
                     @auth
 
-                        <li><a href="{{ url('/User_DashBoard') }}">Welcome  {{ auth()->user()->name }}</a></li>
+                        <li><a href="{{ url('/User_DashBoard') }}">Welcome {{ auth()->user()->name }}</a></li>
                         <li><a href="{{ url('/logout') }}">Logout</a></li>
-
                     @else
                         <li><a href="{{ asset('User_Register') }}">Register</a></li>
                         <li><a href="{{ asset('User_Login') }}">Login</a></li>
 
                     @endauth
+
+
 
 
                 </ul>
@@ -135,7 +138,7 @@
                 <div
                     class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
                     <h2>Welcome to interviewo</h2>
-                    <p>Dream job!!!Dream career!!!Dream company!!!.</p>
+                    <p>Dream job! Dream career!!Dream company!!!.</p>
                     <div class="d-flex justify-content-center justify-content-lg-start">
                         <a href="#about" class="btn-get-started">Get Started</a>
                         <a href="https://youtu.be/Ui7MZxhVj7w"
@@ -157,7 +160,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-easel"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Lorem Ipsum</a></h4>
+                            <h4 class="title"><a href="" class="stretched-link">Fresh Graduates looking for a
+                                    Fresh Graduates looking for a Job</a></h4>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -165,7 +169,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-gem"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Sed ut perspiciatis</a></h4>
+                            <h4 class="title"><a href="" class="stretched-link">Students who looking for
+                                    corporate training</a></h4>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -173,7 +178,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Magni Dolores</a></h4>
+                            <h4 class="title"><a href="" class="stretched-link">Professionals looking to
+                                    change their Job or Career</a></h4>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -181,7 +187,47 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-command"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Nemo Enim</a></h4>
+                            <h4 class="title"><a href="" class="stretched-link">Professional looking to
+                                    re-join after a break</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                </div>
+                <div class="row gy-4 mt-5">
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-easel"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Exclusive Interview
+                                    Questions</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-gem"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Students applying for higher
+                                    studies</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Student & Professional plan
+                                    for abroad</a></h4>
+                        </div>
+                    </div>
+                    <!--End Icon Box -->
+
+                    <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bi bi-command"></i></div>
+                            <h4 class="title"><a href="" class="stretched-link">Free Self introduction,
+                                    Resume Key Points & Video resume</a></h4>
                         </div>
                     </div>
                     <!--End Icon Box -->
@@ -202,13 +248,15 @@
 
                 <div class="section-header">
                     <h2>About Us</h2>
-                    <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat
-                        sunt id nobis omnis tiledo stran delop</p>
+                    <p>Start, change, or advance your career with more than 12,000 courses, Professional Certificates,
+                        and degrees from world-class industries and companies.
+
+                    </p>
                 </div>
 
                 <div class="row gy-4">
                     <div class="col-lg-6">
-                        <h3>Voluptatem dignissimos provident quasi corporis</h3>
+                        <h3>Upskill yourself out of box</h3>
                         <img src="{{ asset('images/about.jpg') }}" class="img-fluid rounded-4 mb-4" alt="">
                         <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat
                             debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur
@@ -1054,7 +1102,7 @@
                             <p class="post-category">Politics</p>
 
                             <h2 class="title">
-                                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                                <a href="{{ url('/blog_details') }}">Dolorum optio tempore voluptas dignissimos</a>
                             </h2>
 
                             <div class="d-flex align-items-center">
@@ -1081,7 +1129,8 @@
                             <p class="post-category">Sports</p>
 
                             <h2 class="title">
-                                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                                <a href="{{ url('/blog_details') }}">Nisi magni odit consequatur autem nulla
+                                    dolorem</a>
                             </h2>
 
                             <div class="d-flex align-items-center">
@@ -1108,7 +1157,8 @@
                             <p class="post-category">Entertainment</p>
 
                             <h2 class="title">
-                                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et
+                                <a href="{{ url('/blog_details') }}">Possimus soluta ut id suscipit ea ut in quo quia
+                                    et
                                     soluta</a>
                             </h2>
 
