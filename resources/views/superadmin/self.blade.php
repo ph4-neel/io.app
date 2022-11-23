@@ -356,7 +356,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($skills as $items )
+                                        @foreach ($intro as $items )
 
 
                                         <tr>

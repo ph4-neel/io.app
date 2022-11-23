@@ -18,6 +18,7 @@
     <script src="https://interviewo.app/assets/js/config.js"></script>
     <script src="https://interviewo.app/assets/vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
     <script src="https://interviewo.app/assets/js/jquery.min.js"></script>
+    <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -101,19 +102,19 @@
                                     <hr class="mb-0 navbar-vertical-divider" />
                                 </div>
                             </div>
-                            <a class="nav-link" href="/" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{{url('/get_Self')}}" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-palette"></span></span><span class="nav-link-text ps-1">Self
                                         Introduction</span>
                                 </div>
                             </a>
-                            <a class="nav-link" href="/" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{{url('/get_resmue')}}" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-table"></span></span><span class="nav-link-text ps-1">Resume
                                         Writing</span>
                                 </div>
                             </a>
-                            <a class="nav-link" href="/" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{{url('/get_video')}}" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-comments"></span></span><span
                                         class="nav-link-text ps-1">Video Resume</span>
@@ -153,11 +154,11 @@
                                     <hr class="mb-0 navbar-vertical-divider" />
                                 </div>
                             </div>
-                            <a class="nav-link" href="https://interviewo.app/admin/master/skills" role="button"
+                            <a class="nav-link" href="{{url('/get_Skills')}}" role="button"
                                 aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-award"></span></span><span
-                                        class="nav-link-text ps-1">Skills</span>
+                                        class="nav-link-text ps-1">Skillsss</span>
                                 </div>
                             </a>
 
@@ -327,25 +328,29 @@
 
 
 
-                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
-                    <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Skill</h5>
+                {{-- <form class="form-group" method="POST" action="/Save" enctype="multipart/form-data">
+                    @csrf
+                    <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
+                        <div class="col d-flex align-items-center">
+                            <h5 class="mb-0">Skill</h5>
+                        </div>
+
+                        <div class="col-auto d-flex align-items-center">
+                            <button type="submit" name="submit"
+                                href="https://interviewo.app/admin/master/skills/create"
+                                class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
+                                    class="fas fa-plus me-2"></span>Save Skill</button>
+                        </div>
                     </div>
-                    <div class="col-auto d-flex align-items-center">
-                        <a href="https://interviewo.app/admin/master/skills/create"
-                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
-                                class="fas fa-plus me-2"></span>Add Skill</a>
-                    </div>
-                </div>
 
 
-                <div class="row g-3 mb-3">
-                    <div class="col-md-12 col-xxl-12">
-                        <div class="card h-md-100">
-                            <div class="card-header pb-0">
-                                <h6 class="mb-0 mt-2 d-flex align-items-center">Skills List</h6>
-                            </div>
-                            <div class="card-body d-flex flex-column justify-content-end">
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-12 col-xxl-12">
+                            <div class="card h-md-100">
+                                <div class="card-header pb-0">
+                                    <h6 class="mb-0 mt-2 d-flex align-items-center">Title</h6>
+                                </div>
+                                {{-- <div class="card-body d-flex flex-column justify-content-end">
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -356,37 +361,129 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($skills as $items )
-
-
                                         <tr>
-                                            <td>{{$items->type}}</td>
-                                            <td>{{$items->title}}</td>
-                                            <td><img src="{{'uploads/'.$items->path }}"  height="30" alt=""></td>
-                                            <td><a href="">update</a></td>
+                                            <td>hello</td>
+                                            <td>hello</td>
+                                            <td>hello</td>
+                                            <td>hello</td>
 
                                         </tr>
 
-                                        @endforeach
+
+
+
 
 
                                     </tbody>
                                 </table>
+                            </div> --}}
+                            <form class="form-group" method="POST" action="/Admin_resume" enctype="multipart/form-data">
+                                @csrf
+
+
+
+
+                        <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
+                            <div class="col d-flex align-items-center">
+                                <h5 class="mb-0">Self IntroDuction</h5>
+                            </div>
+
+
+                            <div class="col-auto d-flex align-items-center">
+                                <button type="submit" name="submit"
+                                    class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
+                                        class="fas fa-plus me-1"></span>Save Content</button>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <footer class="footer">
-                    <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">
-                        <div class="col-12 col-sm-auto text-center">
-                            <p class="mb-0 text-600">Designed 2022 &copy; <a href="https://fintechgie.com"
-                                    target="_blank">FintechGie</a></p>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-12 col-xxl-12">
+                                <div class="card h-md-100">
+                        <div class="card-header pb-0">
+                            <h6 class="mb-0 mt-2 d-flex align-items-center">Skill Detail</h6>
                         </div>
-                    </div>
-                </footer>
+
+
+
+                        <div class="card-body d-flex flex-column justify-content-end">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="title">Title</label>
+                                        <div class="input-group has-validation">
+                                            <input class="form-control" placeholder="eg:Key Skills" name="title"
+                                                type="text" id="title">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <div class="input-group has-validation">
+                                            <input name="image" type="file" id="image">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="type">Type</label>
+                                        <div class="input-group has-validation">
+                                            <div class="radio">
+                                                <label><input checked="checked" name="type" type="radio"
+                                                        value="soft" id="type"> Soft</label>
+                                                <label><input name="type" type="radio" value="hard"
+                                                        id="type">
+                                                    Hard</label>
+                                                <label><input name="type" type="radio" value="tool"
+                                                        id="type">
+                                                    Tool</label>
+                                                <label><input name="type" type="radio" value="tech"
+                                                        id="type">
+                                                    Tech</label>
+                                                <label><input name="type" type="radio" value="domain"
+                                                        id="type">
+                                                    Domain</label>
+                                                <label><input name="type" type="radio" value="key"
+                                                        id="type">
+                                                    Key</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <textarea class="form-control" placeholder="Instructions" name="description" cols="50" rows="10"
+                                            id="description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <div class="row g-0 justify-content-between fs--1 mt-4 mb-3">
+                <div class="col-12 col-sm-auto text-center">
+                    <p class="mb-0 text-600">Designed 2022 &copy; <a href="https://fintechgie.com"
+                            target="_blank">FintechGie</a></p>
+                </div>
+            </div>
+        </footer>
+        </div>
+        </div>
     </main>
+
+    <script>
+        CKEDITOR.replace('benefits');
+        CKEDITOR.replace('description');
+        CKEDITOR.replace('faq');
+    </script>
     <script src="https://interviewo.app/assets/vendors/popper/popper.min.js"></script>
     <script src="https://interviewo.app/assets/vendors/bootstrap/bootstrap.min.js"></script>
     <script src="https://interviewo.app/assets/vendors/anchorjs/anchor.min.js"></script>

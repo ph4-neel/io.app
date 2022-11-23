@@ -356,7 +356,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($skills as $items )
+                                        @foreach ($video as $items )
 
 
                                         <tr>

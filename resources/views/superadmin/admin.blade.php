@@ -101,19 +101,19 @@
                                     <hr class="mb-0 navbar-vertical-divider" />
                                 </div>
                             </div>
-                            <a class="nav-link" href="/" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{{url('/get_Self')}}" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-palette"></span></span><span class="nav-link-text ps-1">Self
                                         Introduction</span>
                                 </div>
                             </a>
-                            <a class="nav-link" href="/" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{{url('/get_resmue')}}" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-table"></span></span><span class="nav-link-text ps-1">Resume
                                         Writing</span>
                                 </div>
                             </a>
-                            <a class="nav-link" href="/" role="button" aria-expanded="false">
+                            <a class="nav-link" href="{{url('/get_video')}}" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-comments"></span></span><span
                                         class="nav-link-text ps-1">Video Resume</span>
@@ -153,11 +153,11 @@
                                     <hr class="mb-0 navbar-vertical-divider" />
                                 </div>
                             </div>
-                            <a class="nav-link" href="https://interviewo.app/admin/master/skills" role="button"
+                            <a class="nav-link" href="{{url('/get_Skills')}}" role="button"
                                 aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-award"></span></span><span
-                                        class="nav-link-text ps-1">Skills</span>
+                                        class="nav-link-text ps-1">Skillsss</span>
                                 </div>
                             </a>
 
@@ -329,13 +329,38 @@
 
                 <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
                     <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Dashboard</h5>
+                        <h5 class="mb-0">Add Skills</h5>
                     </div>
                     <div class="col-auto d-flex align-items-center">
                         <a href="{{url('/Skills_add')}}"
                             class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
                                 class="fas fa-plus me-2"></span>Add Skill</a>
                     </div>
+
+                </div>
+
+                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
+                    <div class="col d-flex align-items-center">
+                        <h5 class="mb-0">Add Self Introduction</h5>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="{{url('/Self_intro')}}"
+                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
+                                class="fas fa-plus me-2"></span>Add Self Introduction</a>
+                    </div>
+
+                </div>
+
+                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
+                    <div class="col d-flex align-items-center">
+                        <h5 class="mb-0">Add Video Resume</h5>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="{{url('/Admin_video')}}"
+                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
+                                class="fas fa-plus me-2"></span>Add Video Resume</a>
+                    </div>
+
                 </div>
 
 
