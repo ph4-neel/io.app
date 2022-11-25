@@ -43,7 +43,21 @@ class RouteController extends Controller
 
 
 
+    public function blog_details_pages()
+    {
+        return view('pages.blog_details');
+    }
+  
+
+    
+    public function soft_skills_pages()
+    {
+        return view('pages.soft_skills');
+    }
+  
 
 
+    
+    
 
 }

@@ -25,12 +25,22 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
         rel="stylesheet">
-    <link href="https://interviewo.app/assets/vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
+    {{-- <link href="https://interviewo.app/assets/vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
     <link href="https://interviewo.app/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
     <link href="https://interviewo.app/assets/css/theme.min.css" rel="stylesheet" id="style-default">
     <link href="https://interviewo.app/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
-    <link href="https://interviewo.app/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
+    <link href="https://interviewo.app/assets/css/user.min.css" rel="stylesheet" id="user-style-default"> --}}
+
+
+    <link href="{{ asset('css/overlayscrollbars/OverlayScrollbars.min.cs') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/theme-rtl.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/theme.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/user-rtl.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/user.min.css') }}" rel="stylesheet">
+
     <link href="https://interviewo.app/assets/lib/toastr/toastr.css" rel="stylesheet">
+
+    
     <script src="https://interviewo.app/assets/lib/toastr/toastr.min.js"></script>
 
 
