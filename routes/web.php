@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\UserController;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,14 +33,25 @@ Route::get('/Admin_login',[RouteController::class,'Admin_login_Auth'])->name('Ad
 Route::get('/Admin_Register',[RouteController::class,'Admin_Register_Auth'])->name('Admin_Register');
 Route::get('/Profile',[RouteController::class,'Profile_pages'])->name('Profile');
 
+Route::get('/soft_skills',[RouteController::class,'soft_skills_pages'])->name('soft_skills');
 
-Route::get('/admin',function(){
 
-    return view('admin.dashboard.index');
+Route::get('/admins',[AdminController::class,'Admin_Login'])->name('Admin_Login');
+Route::post('/admin_login',[AdminController::class,'Login'])->name('admin_login');
+
+Route::get('/Super_admin',[AdminController::class,'Super_Admin']);
+
+Route::post('/Save',[AdminController::class,'Save_Skills']);
+
+Route::get('/Skills_add',function(){
+
+    return view('superadmin.Skills_Add');
+
 });
 
 Route::get('/test',function(){
 
-    return view('Admin.Index');
+    return view('superadmin.admin');
 
 });
+

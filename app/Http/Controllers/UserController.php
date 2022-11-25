@@ -20,16 +20,17 @@ class UserController extends Controller
 
     public function User_Login_View()
     {
-        return view('Auth.User_Login');  
+        return view('Auth.User_Login');
     }
 
     public function Error_Page()
-    
+
     {
-        return view('Pages.error');  
+        return view('Pages.error');
     }
 
-    
+
+
     public function User_DashBoard()
     {
         return view('Pages.User_Dash_Board');
@@ -52,7 +53,7 @@ class UserController extends Controller
 
        $Users = User::create($valiDateData);
 
-        auth()->login($Users);
+       auth()->login($Users);
 
         return view('Pages.Homepage');
 
@@ -67,6 +68,16 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+
+        if(auth()->attempt($valiDateData)){
+
+            return view('Pages.HomePage');
+        }
+
+        else{
+
+            return view('Auth.User_Login')->with("wrong");
+        }
     }
 
     public function Logout()

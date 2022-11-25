@@ -19,6 +19,17 @@ class RouteController extends Controller
     {
         return view('pages.Coursedetail');
     }
+    public function index_View()
+    {
+        return view('admin.dashboard.index');
+    }
+    public function create_View()
+    {
+        return view('domain-skill.create');
+    }
+   
+
+
 
     public function Skills()
     {
@@ -30,19 +41,18 @@ class RouteController extends Controller
         return view('pages.Profile');
     }
 
-    public function Admin_login_Auth()
-    {
-        return view('Auth.Admin_login');
-    }
 
-    public function Admin_register_Auth()
-    {
-        return view('Auth.Admin_Register');
-    }
 
     public function blog_details_pages()
     {
         return view('pages.blog_details');
+    }
+  
+
+    
+    public function soft_skills_pages()
+    {
+        return view('pages.soft_skills');
     }
   
 

@@ -65,14 +65,21 @@
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1><a href="{{ asset('/') }}">InterviewO.</a></h1>
       </a>
-      <nav id="navbar" class="navbar">
+      {{-- <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">Courses</a></li>
-          <li><a href="#services">Skills</a></li>
-          <li><a href="#portfolio">Join Us</a></li>
-          <li><a href="#team">Contact</a></li>
-          <li><a href="blog.html">Register/a></li>
+          <li><a href="{{url('/')}}">Home</a></li>
+          <li class="dropdown"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i>
+                        <ul>
+                            <li><a href="{{ url('/blog_details') }}">Top Courses</a></li>
+                            <li><a href="{{ url('/blog_details') }}">Free Courses</a></li>
+
+                          
+                        </ul>
+                    </li>
+
+         <li><a href="{{url('/')}}">Contact</a></li>
+         <li><a href="{{url('/')}}">Welcome</a></li>
+          
 
           {{-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
@@ -91,9 +98,39 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> --}}
-          <li><a href="#contact">Login</a></li>
+          
         </ul>
-      </nav><!-- .navbar -->
+      {{-- </nav> --}}
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="{{ url('/') }}">Home</a></li>
+
+            <li class="dropdown"><a href="#"><span>Courses 🡣 </span></a>
+              <ul>
+                  <li><a href="{{ url('/blog_details') }}">Top Courses</a></li>
+                  <li><a href="{{ url('/blog_details') }}">Free Courses</a></li>
+                  {{-- <li><a href="{{ url('/blog_details') }}">Enterprise Login</a></li> --}}
+
+                  {{-- <li><a href="#">Company Login</a></li>
+                  <li><a href="#">Universities Login</a></li> --}}
+              </ul>
+          </li>
+          
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Welcome</a></li>
+
+          
+            
+           
+
+
+
+
+        </ul>
+    </nav>
+
+      
+      <!-- .navbar --> 
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
@@ -110,7 +147,7 @@
         <div class="container position-relative">
           <div class="row d-flex justify-content-center">
             <div class="col-lg-6 text-center">
-              <h2>Blog Details</h2>
+              <h2>Skills Details</h2>
               <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
             </div>
           </div>
@@ -120,13 +157,13 @@
         <div class="container">
           <ol>
            
-            <li>Blog Details</li>
+            <li>Skills Details</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Breadcrumbs -->
 
-    <!-- ======= Blog Details Section ======= -->
+    <!-- ======= Skills Details Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
 
@@ -136,9 +173,12 @@
 
             <article class="blog-details">
 
-              <div class="post-img">
-                <img src="{{ asset('images/about.jpg') }}" alt="" class="img-fluid">
-              </div>
+             
+              <div class="position-relative mt-4">
+                <img src="{{ asset('images/about-2.jpg') }}" class="img-fluid rounded-4"
+                    alt="">
+                <a href="https://youtu.be/Ui7MZxhVj7w" class="glightbox play-btn"></a>
+            </div>
 
               <h2 class="title">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</h2>
 
