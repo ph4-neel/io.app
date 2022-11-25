@@ -363,17 +363,18 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($skills as $items )
+
+
                                         <tr>
-                                            <td>hello</td>
-                                            <td>hello</td>
-                                            <td>hello</td>
-                                            <td>hello</td>
+                                            <td>{{$items->type}}</td>
+                                            <td>{{$items->title}}</td>
+                                            <td><img src="{{'uploads/'.$items->path }}"  height="30" alt=""></td>
+                                            <td><a href="">update</a></td>
 
                                         </tr>
 
-
-
-
+                                        @endforeach
 
 
                                     </tbody>
