@@ -15,8 +15,9 @@ Route::get('/', [RouteController::class, 'Homepage_View'])->name('Homepage');
 Route::get('/Admin_Skills', [RouteController::class, 'Skills']);
 
 Route::get('/User_Register', [UserController::class, 'User_Register_View'])->name('User_Register');
-Route::post('/User_Register', [UserController::class, 'Register'])->name('User_Register');
-Route::get('/User_Login', [UserController::class, 'User_Login_View'])->name('User_Login');
+Route::post('/User_Registers', [UserController::class, 'Register'])->name('User_Register');
+Route::get('/User_Login', [UserController::class, 'User_Login_View'])->name('User_Login')->middleware();
+Route::post('/User_Login',[UserController::class,'Login'])->middleware();
 Route::get('/User_DashBoard', [UserController::class, 'User_DashBoard'])->name('User_DashBoard');
 Route::get('/logout', [UserController::class, 'Logout'])->name('Logout');
 
@@ -62,3 +63,5 @@ Route::post('/Self_intro',[AdminController::class,'Save_Intro']);
 Route::get('/get_Self',[AdminController::class,'getSelf']);
 Route::get('/get_resmue',[AdminController::class,'getresume']);
 Route::get('/get_video',[AdminController::class,'getVideo']);
+
+Route::get('/User_list',[AdminController::class,'getUser']);

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('type');
             $table->string('image');
             $table->string('description');
+            $table->string('faq');
+            $table->string('tag');
             $table->timestamps();
         });
     }
