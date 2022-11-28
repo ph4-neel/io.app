@@ -24,22 +24,12 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
         rel="stylesheet">
-    {{-- <link href="https://interviewo.app/assets/vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
+    <link href="https://interviewo.app/assets/vendors/overlayscrollbars/OverlayScrollbars.min.css" rel="stylesheet">
     <link href="https://interviewo.app/assets/css/theme-rtl.min.css" rel="stylesheet" id="style-rtl">
     <link href="https://interviewo.app/assets/css/theme.min.css" rel="stylesheet" id="style-default">
     <link href="https://interviewo.app/assets/css/user-rtl.min.css" rel="stylesheet" id="user-style-rtl">
-    <link href="https://interviewo.app/assets/css/user.min.css" rel="stylesheet" id="user-style-default"> --}}
-  
-
-
-    <link href="{{ asset('css/overlayscrollbars/OverlayScrollbars.min.cs') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/theme-rtl.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/theme.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/user-rtl.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/user.min.css') }}" rel="stylesheet">
-
+    <link href="https://interviewo.app/assets/css/user.min.css" rel="stylesheet" id="user-style-default">
     <link href="https://interviewo.app/assets/lib/toastr/toastr.css" rel="stylesheet">
-
     <script src="https://interviewo.app/assets/lib/toastr/toastr.min.js"></script>
 
 
@@ -111,19 +101,19 @@
                                     <hr class="mb-0 navbar-vertical-divider" />
                                 </div>
                             </div>
-                            <a class="nav-link" href="{{url('/get_Self')}}" role="button" aria-expanded="false">
+                            <a class="nav-link" href="/" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-palette"></span></span><span class="nav-link-text ps-1">Self
                                         Introduction</span>
                                 </div>
                             </a>
-                            <a class="nav-link" href="{{url('/get_resmue')}}" role="button" aria-expanded="false">
+                            <a class="nav-link" href="/" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-table"></span></span><span class="nav-link-text ps-1">Resume
                                         Writing</span>
                                 </div>
                             </a>
-                            <a class="nav-link" href="{{url('/get_video')}}" role="button" aria-expanded="false">
+                            <a class="nav-link" href="/" role="button" aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-comments"></span></span><span
                                         class="nav-link-text ps-1">Video Resume</span>
@@ -163,11 +153,11 @@
                                     <hr class="mb-0 navbar-vertical-divider" />
                                 </div>
                             </div>
-                            <a class="nav-link" href="{{url('/get_Skills')}}" role="button"
+                            <a class="nav-link" href="https://interviewo.app/admin/master/skills" role="button"
                                 aria-expanded="false">
                                 <div class="d-flex align-items-center"><span class="nav-link-icon"><span
                                             class="fas fa-award"></span></span><span
-                                        class="nav-link-text ps-1">Skillsss</span>
+                                        class="nav-link-text ps-1">Skills</span>
                                 </div>
                             </a>
 
@@ -197,14 +187,6 @@
                                     </a>
                                     <!-- more inner pages-->
                                 </li>
-                                <li class="nav-item"><a class="nav-link" href="{{url('/User_list')}}"
-                                    aria-expanded="false">
-                                    <div class="d-flex align-items-center"><span
-                                            class="nav-link-text ps-1">User Lists</span>
-                                    </div>
-                                </a>
-                                <!-- more inner pages-->
-                            </li>
                                 <li class="nav-item"><a class="nav-link" href="pages/user/settings.html"
                                         aria-expanded="false">
                                         <div class="d-flex align-items-center"><span
@@ -347,57 +329,50 @@
 
                 <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
                     <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Add Skills</h5>
+                        <h5 class="mb-0">Skill</h5>
                     </div>
                     <div class="col-auto d-flex align-items-center">
-                        <a href="{{url('/Skills_add')}}"
+                        <a href="https://interviewo.app/admin/master/skills/create"
                             class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
                                 class="fas fa-plus me-2"></span>Add Skill</a>
                     </div>
-
-                </div>
-
-                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
-                    <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Add Self Introduction</h5>
-                    </div>
-                    <div class="col-auto d-flex align-items-center">
-                        <a href="{{url('/Self_intro')}}"
-                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
-                                class="fas fa-plus me-2"></span>Add Self Introduction</a>
-                    </div>
-
-                </div>
-
-                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
-                    <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Add Video Resume</h5>
-                    </div>
-                    <div class="col-auto d-flex align-items-center">
-                        <a href="{{url('/Admin_video')}}"
-                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
-                                class="fas fa-plus me-2"></span>Add Video Resume</a>
-                    </div>
-
-                </div>
-
-                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
-                    <div class="col d-flex align-items-center">
-                        <h5 class="mb-0">Add Resume writing</h5>
-                    </div>
-                    <div class="col-auto d-flex align-items-center">
-                        <a href="{{url('/Admin_resume')}}"
-                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
-                                class="fas fa-plus me-2"></span>Add Resume Writing</a>
-                    </div>
-
                 </div>
 
 
                 <div class="row g-3 mb-3">
                     <div class="col-md-12 col-xxl-12">
                         <div class="card h-md-100">
+                            <div class="card-header pb-0">
+                                <h6 class="mb-0 mt-2 d-flex align-items-center">Skills List</h6>
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-end">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Skill Type</th>
+                                            <th>Title</th>
+                                            <th>Image</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($intro as $items )
 
+
+                                        <tr>
+                                            <td>{{$items->type}}</td>
+                                            <td>{{$items->title}}</td>
+                                            <td><img src="{{'uploads/'.$items->path }}"  height="30" alt=""></td>
+                                            <td><a href="">update</a></td>
+
+                                        </tr>
+
+                                        @endforeach
+
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

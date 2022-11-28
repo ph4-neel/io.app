@@ -122,6 +122,10 @@
                           <label class="form-label" for="card-email">Email address</label>
                           <input class="form-control" type="email" name="email" autocomplete="on" id="card-email" required />
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="card-email">Email address\</label>
+                            <input class="form-control" type="email" name="email" autocomplete="on" id="card-email" required />
+                          </div>
                         <div class="row gx-2">
                           <div class="mb-3 col-sm-6">
                             <label class="form-label" for="card-password">Password</label>
