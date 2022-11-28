@@ -23,7 +23,7 @@ class UserController extends Controller
         return view('Auth.User_Login');
     }
 
-    }
+    
 
     public function Error_Page()
 
@@ -31,7 +31,7 @@ class UserController extends Controller
         return view('Pages.error');
     }
 
-    }
+    
 
 
     public function User_DashBoard()
@@ -79,4 +79,4 @@ class UserController extends Controller
         return view('Pages.Homepage');
 
     }
-}
+};
