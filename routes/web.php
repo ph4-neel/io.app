@@ -55,6 +55,46 @@ Route::get('/Admin_video',function(){
     return view('superadmin.Admin_video');
 
 });
+Route::get('/enterpriselogin',function(){
+
+    return view('Auth.Enterprise_login');
+
+});
+Route::get('/enterpriseregister',function(){
+
+    return view('Auth.Enterprise_register');
+
+});
+Route::get('/institutelogin',function(){
+
+    return view('Auth.Institute_login');
+
+});
+Route::get('/instituteregister',function(){
+
+    return view('Auth.Institute_register');
+
+});
+Route::get('/employeelogin',function(){
+
+    return view('Auth.Employee_login');
+
+});
+Route::get('/employeeregister',function(){
+
+    return view('Auth.Employee_register');
+
+});
+Route::get('/studentlogin',function(){
+
+    return view('Auth.Student_login');
+
+});
+Route::get('/studentregister',function(){
+
+    return view('Auth.Student_register');
+
+});
 
 Route::post('/Admin_resume',[AdminController::class,'Save_resume']);
 Route::post('/Admin_video',[AdminController::class,'Save_Video']);
