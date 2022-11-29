@@ -23,13 +23,18 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
 
- 
+
+
+
 
 
 
@@ -41,86 +46,58 @@
 
 
 
-    <!-- ======= Header ======= -->
-    <section id="topbar" class="topbar d-flex align-items-center">
-        <div class="container d-flex justify-content-center justify-content-md-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope d-flex align-items-center"><a
-                        href="mailto:contact@example.com">info@fintechgie.com</a></i>
-                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-9047555066</span></i>
-            </div>
-            <div class="social-links d-none d-md-flex align-items-center">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-            </div>
-        </div>
-    </section><!-- End Top Bar -->
 
-    <header id="header" class="header d-flex align-items-center">
+       
 
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1>interviewo</h1>
-            </a>
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a href="{{ url('/') }}">Home</a></li>
+    <header>
+        <nav class="navbar navbar-expand-lg shadow" style="background-color:#008374; padding:20px"> 
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"style="color: aliceblue; font-weight:bold ; font-size:25px">interviewo.App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="color: aliceblue; font-weight:bold">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: aliceblue; font-weight:bold">Skills</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" style="color: aliceblue; font-weight:bold" >
+                               Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" style="color: aliceblue; font-weight:bold">Action</a></li>
+                                <li><a class="dropdown-item" href="#" style="color: aliceblue; font-weight:bold">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#" style="color: aliceblue; font-weight:bold">Something else here</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="{{ url('/blog_details') }}">Top Courses</a></li>
-                            <li><a href="{{ url('/blog_details') }}">Free Courses</a></li>
-                            {{-- <li><a href="{{ url('/blog_details') }}">Enterprise Login</a></li> --}}
-
-                            {{-- <li><a href="#">Company Login</a></li>
-                            <li><a href="#">Universities Login</a></li> --}}
-                        </ul>
-                    </li>
-
-                    <li class="dropdown"><a href="#"><span>Skills</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="{{ url('/soft_skills') }}">Soft Skills</a></li>
-                            <li><a href="{{ url('/blog_details') }}">Heard Skills</a></li>
-                            {{-- <li><a href="{{ url('/blog_details') }}">Enterprise Login</a></li> --}}
-
-                            {{-- <li><a href="#">Company Login</a></li>
-                            <li><a href="#">Universities Login</a></li> --}}
-                        </ul>
-                    </li>
-
-                    
-
-                    <li><a href="#contact">Contact</a></li>
-  
-                  
-                    
-                   
-                    @auth
-
-                        <li><a href="{{ url('/User_DashBoard') }}">Welcome {{ auth()->user()->name }}</a></li>
-                        <li><a href="{{ url('/logout') }}">Logout</a></li>
-                    @else
-                        <li><a href="{{ asset('User_Register') }}">Register</a></li>
-                        <li><a href="{{ asset('User_Login') }}">Login</a></li>
-
-                    @endauth
-
-
-
-
+                        
+                       
+                    </ul>
+                    <ul class="navbar-nav ms-auto mb-lg-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: aliceblue; font-weight:bold">Register</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: aliceblue; font-weight:bold">Login</a>
+                        </li>
+                        
                 </ul>
-            </nav><!-- .navbar -->
-
-            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-        </div>
-    </header><!-- End Header -->
-    <!-- End Header -->
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero">
@@ -151,7 +128,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-easel"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Fresh Graduates looking for a
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Fresh Graduates looking for a
                                     Fresh Graduates looking for a Job</a></h4>
                         </div>
                     </div>
@@ -160,7 +137,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-gem"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Students who looking for
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Students who looking for
                                     corporate training</a></h4>
                         </div>
                     </div>
@@ -169,7 +146,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Professionals looking to
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Professionals looking to
                                     change their Job or Career</a></h4>
                         </div>
                     </div>
@@ -178,7 +155,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-command"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Professional looking to
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Professional looking to
                                     re-join after a break</a></h4>
                         </div>
                     </div>
@@ -190,7 +167,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-easel"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Exclusive Interview
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Exclusive Interview
                                     Questions</a></h4>
                         </div>
                     </div>
@@ -199,7 +176,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-gem"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Students applying for higher
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Students applying for higher
                                     studies</a></h4>
                         </div>
                     </div>
@@ -208,7 +185,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Student & Professional plan
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Student & Professional plan
                                     for abroad</a></h4>
                         </div>
                     </div>
@@ -217,7 +194,7 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-command"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link">Free Self introduction,
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Free Self introduction,
                                     Resume Key Points & Video resume</a></h4>
                         </div>
                     </div>
@@ -293,66 +270,13 @@
         </section><!-- End About Us Section -->
 
         <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients">
-            <div class="container" data-aos="zoom-out">
-
-                <div class="clients-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-1.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-2.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-3.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-4.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-5.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-6.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-7.png') }}"
-                                class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="{{ asset('images/clients/client-8.png') }}"
-                                class="img-fluid" alt=""></div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Clients Section -->
+      <!-- End Clients Section -->
 
         <!-- ======= Stats Counter Section ======= -->
         <section id="stats-counter" class="stats-counter">
             <div class="container" data-aos="fade-up">
 
-                <div class="row gy-4 align-items-center">
-
-                    <div class="col-lg-6">
-                        <img src="{{ asset('images/stats-img.svg') }}" alt="" class="img-fluid">
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="stats-item d-flex align-items-center">
-                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p><strong>Happy Clients</strong> consequuntur quae diredo para mesta</p>
-                        </div><!-- End Stats Item -->
-
-                        <div class="stats-item d-flex align-items-center">
-                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p><strong>Projects</strong> adipisci atque cum quia aut</p>
-                        </div><!-- End Stats Item -->
-
-                        <div class="stats-item d-flex align-items-center">
-                            <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1"
-                                class="purecounter"></span>
-                            <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
-                        </div><!-- End Stats Item -->
-
-                    </div>
-
-                </div>
+              
 
             </div>
         </section><!-- End Stats Counter Section -->
@@ -1103,7 +1027,7 @@
         </section><!-- End Pricing Section --> --}}
 
         <!-- ======= Frequently Asked Questions Section ======= -->
-       <!-- End Frequently Asked Questions Section -->
+        <!-- End Frequently Asked Questions Section -->
 
 
 
@@ -1204,7 +1128,7 @@
                     </div><!-- End post list item -->
 
                 </div>
-                
+
                 <div class="row gy-4">
 
                     <div class="col-xl-4 col-md-6">
@@ -1377,24 +1301,26 @@
                     </div>
                     <section id="faq" class="faq">
                         <div class="container" data-aos="fade-up">
-            
+
                             <div class="row gy-4">
-            
+
                                 <div class="col-lg-4">
                                     <div class="content px-xl-5">
                                         <h3>Frequently Asked <strong>Questions</strong></h3>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                            incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in
+                                            reprehenderit
                                         </p>
                                     </div>
                                 </div>
-            
+
                                 <div class="col-lg-8">
-            
+
                                     <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up"
                                         data-aos-delay="100">
-            
+
                                         <div class="accordion-item">
                                             <h3 class="accordion-header">
                                                 <button class="accordion-button collapsed" type="button"
@@ -1406,13 +1332,15 @@
                                             <div id="faq-content-1" class="accordion-collapse collapse"
                                                 data-bs-parent="#faqlist">
                                                 <div class="accordion-body">
-                                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus
-                                                    laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor
+                                                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
+                                                    volutpat lacus
+                                                    laoreet non curabitur gravida. Venenatis lectus magna fringilla urna
+                                                    porttitor
                                                     rhoncus dolor purus non.
                                                 </div>
                                             </div>
                                         </div><!-- # Faq item-->
-            
+
                                         <div class="accordion-item">
                                             <h3 class="accordion-header">
                                                 <button class="accordion-button collapsed" type="button"
@@ -1424,33 +1352,41 @@
                                             <div id="faq-content-2" class="accordion-collapse collapse"
                                                 data-bs-parent="#faqlist">
                                                 <div class="accordion-body">
-                                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                                    scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant
+                                                    morbi. Id
+                                                    interdum velit laoreet id donec ultrices. Fringilla phasellus
+                                                    faucibus
+                                                    scelerisque eleifend donec pretium. Est pellentesque elit
+                                                    ullamcorper dignissim.
                                                     Mauris ultrices eros in cursus turpis massa tincidunt dui.
                                                 </div>
                                             </div>
                                         </div><!-- # Faq item-->
-            
+
                                         <div class="accordion-item">
                                             <h3 class="accordion-header">
                                                 <button class="accordion-button collapsed" type="button"
                                                     data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                                                     <span class="num">3.</span>
-                                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant
+                                                    morbi?
                                                 </button>
                                             </h3>
                                             <div id="faq-content-3" class="accordion-collapse collapse"
                                                 data-bs-parent="#faqlist">
                                                 <div class="accordion-body">
-                                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.
-                                                    Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl
-                                                    suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis
-                                                    convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis
+                                                    orci.
+                                                    Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam
+                                                    sit amet nisl
+                                                    suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis
+                                                    convallis
+                                                    convallis tellus. Urna molestie at elementum eu facilisis sed odio
+                                                    morbi quis
                                                 </div>
                                             </div>
                                         </div><!-- # Faq item-->
-            
+
                                         <div class="accordion-item">
                                             <h3 class="accordion-header">
                                                 <button class="accordion-button collapsed" type="button"
@@ -1462,14 +1398,17 @@
                                             <div id="faq-content-4" class="accordion-collapse collapse"
                                                 data-bs-parent="#faqlist">
                                                 <div class="accordion-body">
-                                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id
-                                                    interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus
-                                                    scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
+                                                    Dolor sit amet consectetur adipiscing elit pellentesque habitant
+                                                    morbi. Id
+                                                    interdum velit laoreet id donec ultrices. Fringilla phasellus
+                                                    faucibus
+                                                    scelerisque eleifend donec pretium. Est pellentesque elit
+                                                    ullamcorper dignissim.
                                                     Mauris ultrices eros in cursus turpis massa tincidunt dui.
                                                 </div>
                                             </div>
                                         </div><!-- # Faq item-->
-            
+
                                         <div class="accordion-item">
                                             <h3 class="accordion-header">
                                                 <button class="accordion-button collapsed" type="button"
@@ -1481,19 +1420,22 @@
                                             <div id="faq-content-5" class="accordion-collapse collapse"
                                                 data-bs-parent="#faqlist">
                                                 <div class="accordion-body">
-                                                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim
-                                                    suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan.
-                                                    Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit
+                                                    Molestie a iaculis at erat pellentesque adipiscing commodo.
+                                                    Dignissim
+                                                    suspendisse in est ante in. Nunc vel risus commodo viverra maecenas
+                                                    accumsan.
+                                                    Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis
+                                                    blandit
                                                     turpis cursus in
                                                 </div>
                                             </div>
                                         </div><!-- # Faq item-->
-            
+
                                     </div>
-            
+
                                 </div>
                             </div>
-            
+
                         </div>
                     </section>
                     <!-- End Contact Form -->
@@ -1505,6 +1447,62 @@
 
     </main><!-- End #main -->
 
+    <div class="row gy-4 align-items-center">
+
+        <div class="col-lg-6">
+            <img src="{{ asset('images/stats-img.svg') }}" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                <p><strong>Happy Clients</strong> consequuntur quae diredo para mesta</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+                <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1"
+                    class="purecounter"></span>
+                <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            </div><!-- End Stats Item -->
+
+        </div>
+
+    </div>
+
+    <section id="clients" class="clients">
+        <div class="container" data-aos="zoom-out">
+
+            <div class="clients-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-1.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-2.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-3.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-4.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-5.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-6.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-7.png') }}"
+                            class="img-fluid" alt=""></div>
+                    <div class="swiper-slide"><img src="{{ asset('images/clients/client-8.png') }}"
+                            class="img-fluid" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
 
@@ -1517,10 +1515,14 @@
                     <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita
                         valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
                     <div class="social-links d-flex mt-4">
-                        <a href="{{ url('https://twitter.com/fintechgie') }}" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="{{ url('https://www.facebook.com/fintechgie') }}" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="{{ url('https://www.instagram.com/fintechgie') }}" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="{{ url('https://www.linkedin.com/in/fintechgie-inc-5730a516a') }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="{{ url('https://twitter.com/fintechgie') }}" class="twitter"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="{{ url('https://www.facebook.com/fintechgie') }}" class="facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="{{ url('https://www.instagram.com/fintechgie') }}" class="instagram"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="{{ url('https://www.linkedin.com/in/fintechgie-inc-5730a516a') }}"
+                            class="linkedin"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
@@ -1595,6 +1597,10 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
 
 </body>
 

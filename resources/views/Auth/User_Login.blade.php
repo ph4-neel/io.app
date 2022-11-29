@@ -36,8 +36,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
    
 
-    <link href="{{ asset('css/overlayscrollbars/OverlayScrollbars.min.cs') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/theme-rtl.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/OverlayScrollbars.min.cs') }}" rel="stylesheet">
+    <link href="{{ asset('css/theme-rtl.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/theme.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user-rtl.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user.min.css') }}" rel="stylesheet">

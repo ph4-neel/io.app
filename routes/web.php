@@ -26,6 +26,8 @@ Route::get('/Profile',[RouteController::class,'Profile_pages'])->name('Profile')
 
 Route::get('/soft_skills',[RouteController::class,'soft_skills_pages'])->name('soft_skills');
 
+Route::get('/video_section',[RouteController::class,'video_section_pages'])->name('video_section');
+
 
 Route::get('/admins', [AdminController::class, 'Admin_Login'])->name('Admin_Login');
 Route::post('/admin_login', [AdminController::class, 'Login'])->name('admin_login');
@@ -58,6 +60,11 @@ Route::get('/Admin_resume', function () {
 Route::get('/Admin_video',function(){
 
     return view('superadmin.Admin_video');
+
+});
+Route::get('/profile',function(){
+
+    return view('Auth.profile');
 
 });
 

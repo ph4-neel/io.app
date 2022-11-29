@@ -19,7 +19,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
- 
+  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
 
   <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
@@ -49,11 +54,12 @@
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="{{ url('https://twitter.com/fintechgie') }}" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="{{ url('https://www.facebook.com/fintechgie') }}" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="{{ url('https://www.instagram.com/fintechgie') }}" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="{{ url('https://www.linkedin.com/in/fintechgie-inc-5730a516a') }}" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
+     
     </div>
   </section><!-- End Top Bar -->
 
@@ -153,14 +159,7 @@
           </div>
         </div>
       </div>
-      <nav>
-        <div class="container">
-          <ol>
-           
-            <li>Skills Details</li>
-          </ol>
-        </div>
-      </nav>
+     
     </div><!-- End Breadcrumbs -->
 
     <!-- ======= Skills Details Section ======= -->

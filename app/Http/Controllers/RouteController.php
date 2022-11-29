@@ -55,6 +55,12 @@ class RouteController extends Controller
         return view('pages.soft_skills');
     }
   
+        
+    public function video_section_pages()
+    {
+        return view('pages.video_section');
+    }
+  
 
 
     
