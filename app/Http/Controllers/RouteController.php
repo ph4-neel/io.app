@@ -36,9 +36,9 @@ class RouteController extends Controller
         return view('Admin.Skills');
     }
 
-    public function Profile_pages()
+    public function Profile_Auth()
     {
-        return view('pages.Profile');
+        return view('Auth.Profile');
     }
 
 

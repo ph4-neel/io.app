@@ -23,18 +23,26 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    {{-- <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
 
 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
 
 
 
@@ -47,11 +55,11 @@
 
 
 
-       
+
 
     <header>
-        <nav class="navbar navbar-expand-lg shadow" style="background-color:#008374; padding:20px"> 
-            <div class="container-fluid">
+        {{-- <nav class="navbar navbar-expand-lg shadow" style="background-color:#008374; padding:20px"> 
+            <div class="container-fluid" style="background: #059f8d">
                 <a class="navbar-brand" href="#"style="color: aliceblue; font-weight:bold ; font-size:25px">interviewo.App</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -61,23 +69,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" style="color: aliceblue; font-weight:bold">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{url('/')}}" style="color: aliceblue; font-weight:bold" >Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: aliceblue; font-weight:bold">Skills</a>
+                            <a class="nav-link" href="{{url('/soft_skills')}}" style="color: aliceblue; font-weight:bold">Skills</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false" style="color: aliceblue; font-weight:bold" >
                                Courses
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" style="color: aliceblue; font-weight:bold">Action</a></li>
-                                <li><a class="dropdown-item" href="#" style="color: aliceblue; font-weight:bold">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" style="color: aliceblue; font-weight:bold">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#" >Action</a></li>
+                                <li><a class="dropdown-item" href="#" >Another action</a></li>
+                                
                             </ul>
                         </li>
 
@@ -86,17 +91,67 @@
                     </ul>
                     <ul class="navbar-nav ms-auto mb-lg-2">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: aliceblue; font-weight:bold">Register</a>
+                            <a class="nav-link" href="{{url('/User_Register')}}" style="color: aliceblue; font-weight:bold">Register</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: aliceblue; font-weight:bold">Login</a>
+                            <a class="nav-link" href="{{url('/User_Login')}}" style="color: aliceblue; font-weight:bold">Login</a>
                         </li>
                         
                 </ul>
                 </div>
             </div>
+        </nav> --}}
+
+        <nav class="navbar navbar-standard navbar-expand-lg fixed-top navbar-dark"
+            data-navbar-darken-on-scroll="data-navbar-darken-on-scroll" style="background-color:#011a17">
+            <div class="container"><a class="navbar-brand" href="../index.html"><span
+                        class="text-white dark__text-white">InterviewO</span></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse scrollbar" id="navbarStandard">
+                    <ul class="navbar-nav" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                       
+
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                id="dashboards">Home</a>
+                            <div class="dropdown-menu dropdown-menu-card border-0 mt-0" aria-labelledby="dashboards">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2"><a
+                                        class="dropdown-item link-600 fw-medium" href="../index.html">Soft Skills</a><a
+                                        class="dropdown-item link-600 fw-medium"
+                                        href="../dashboard/analytics.html">Hard Skills</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                id="documentations">Documentation</a>
+                            <div class="dropdown-menu dropdown-menu-card border-0 mt-0"
+                                aria-labelledby="documentations">
+                                <div class="bg-white dark__bg-1000 rounded-3 py-2"><a
+                                        class="dropdown-item link-600 fw-medium"
+                                        href="../documentation/gulp.html">Top Courses</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        
+                        <li class="nav-item"><a class="nav-link" href="#!" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Login</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="#!" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Register</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
+
+
     </header>
 
     <!-- ======= Hero Section ======= -->
@@ -128,7 +183,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-easel"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Fresh Graduates looking for a
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Fresh Graduates looking for a
                                     Fresh Graduates looking for a Job</a></h4>
                         </div>
                     </div>
@@ -137,7 +193,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-gem"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Students who looking for
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Students who looking for
                                     corporate training</a></h4>
                         </div>
                     </div>
@@ -146,7 +203,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Professionals looking to
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Professionals looking to
                                     change their Job or Career</a></h4>
                         </div>
                     </div>
@@ -155,7 +213,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-command"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Professional looking to
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Professional looking to
                                     re-join after a break</a></h4>
                         </div>
                     </div>
@@ -167,7 +226,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-easel"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Exclusive Interview
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Exclusive Interview
                                     Questions</a></h4>
                         </div>
                     </div>
@@ -176,7 +236,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-gem"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Students applying for higher
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Students applying for higher
                                     studies</a></h4>
                         </div>
                     </div>
@@ -185,7 +246,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Student & Professional plan
+                            <h4 class="title"><a href="" class="stretched-link"
+                                    style="font-size: 20px">Student & Professional plan
                                     for abroad</a></h4>
                         </div>
                     </div>
@@ -194,7 +256,8 @@
                     <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
                         <div class="icon-box">
                             <div class="icon"><i class="bi bi-command"></i></div>
-                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Free Self introduction,
+                            <h4 class="title"><a href="" class="stretched-link" style="font-size: 20px">Free
+                                    Self introduction,
                                     Resume Key Points & Video resume</a></h4>
                         </div>
                     </div>
@@ -270,13 +333,13 @@
         </section><!-- End About Us Section -->
 
         <!-- ======= Clients Section ======= -->
-      <!-- End Clients Section -->
+        <!-- End Clients Section -->
 
         <!-- ======= Stats Counter Section ======= -->
         <section id="stats-counter" class="stats-counter">
             <div class="container" data-aos="fade-up">
 
-              
+
 
             </div>
         </section><!-- End Stats Counter Section -->

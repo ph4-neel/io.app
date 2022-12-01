@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 
@@ -25,8 +23,11 @@
     <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="../../../assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
-    <script src="../../../assets/js/config.js"></script>
-    <script src="../../../vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+   
+    
+    <script src="{{ asset('js/OverlayScrollbars.min.js') }}"></script>
+    <script src="{{ asset('js/config.js') }}"></script>
+    
 
 
     <!-- ===============================================-->
@@ -34,10 +35,10 @@
     <!-- ===============================================-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
-   
 
-    <link href="{{ asset('css/OverlayScrollbars.min.cs') }}" rel="stylesheet">
-    <link href="{{ asset('css/theme-rtl.min.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/overlayscrollbars/OverlayScrollbars.min.cs') }}" rel="stylesheet">
+    <link href="{{ asset('css/css/theme-rtl.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/theme.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user-rtl.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user.min.css') }}" rel="stylesheet">
@@ -91,8 +92,9 @@
                   <div class="col-md-7 d-flex flex-center">
                     <div class="p-4 p-md-5 flex-grow-1">
                       <h3>Login</h3>
-                      <form class=" needs-validation" novalidate>
-                      
+                      <form class=" needs-validation" method="POST" action="/User_Login" novalidate>
+                        @csrf
+
                         <div class="mb-3">
                           <label class="form-label" for="card-email">Email address</label>
                           <input class="form-control" name="email" type="text" autocomplete="on" id="card-email" required />
@@ -102,7 +104,12 @@
                             <label class="form-label" for="card-password">Password</label>
                             <input class="form-control" name="password" type="password" autocomplete="on" id="card-password" required/>
                           </div>
-                         
+
+                          <div class="mb-3 col-sm-6">
+                            <label class="form-label" for="card-password">Positions</label>
+                            <input class="form-control" name="position" type="password" autocomplete="on" id="card-password" required/>
+                          </div>
+
                         </div>
                         <div class="form-check">
                           <input class="form-check-input" name="name" type="checkbox" id="card-register-checkbox" required />
@@ -286,7 +293,7 @@
 
     </SCript>
 
-  
+
 
   </body>
 
