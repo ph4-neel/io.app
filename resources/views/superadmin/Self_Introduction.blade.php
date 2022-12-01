@@ -456,6 +456,20 @@
                                             id="description"></textarea>
                                     </div>
                                 </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="description">faq</label>
+                                        <textarea class="form-control" placeholder="Instructions" name="faq" cols="50" rows="10"
+                                            id="faq"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="description">Tags</label>
+                                        <textarea class="form-control" placeholder="Instructions" name="tag" cols="50" rows="10"
+                                            id="tag"></textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -483,6 +497,7 @@
         CKEDITOR.replace('benefits');
         CKEDITOR.replace('description');
         CKEDITOR.replace('faq');
+        CKEDITOR.replace('tag');
     </script>
     <script src="https://interviewo.app/assets/vendors/popper/popper.min.js"></script>
     <script src="https://interviewo.app/assets/vendors/bootstrap/bootstrap.min.js"></script>

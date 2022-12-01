@@ -21,6 +21,10 @@ return new class extends Migration
             $table->string('phone');
             $table->string('types');
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('dob');
+            $table->string('gender');
+            $table->string('country');
+            $table->string('address',100);
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

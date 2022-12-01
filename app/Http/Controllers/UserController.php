@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use function Ramsey\Uuid\v1;
 
@@ -23,12 +24,15 @@ class UserController extends Controller
         return view('Auth.User_Login');
     }
 
+    
+
     public function Error_Page()
 
     {
         return view('Pages.error');
     }
 
+    
 
 
     public function User_DashBoard()
@@ -47,44 +51,50 @@ class UserController extends Controller
             'email' => 'required|unique:users',
             'phone' => 'required',
             'types' => 'required',
+            'dob' => 'required',
+            'gender' => 'required',
+            'country'=>'required',
+            'address' => 'required',
             'password' => 'required'
         ]);
 
+        $valiDateData['password'] = bcrypt($valiDateData['password']);
 
-       $Users = User::create($valiDateData);
+        $Users = User::create($valiDateData);
 
-       auth()->login($Users);
+        auth()->login($Users);
 
-        return view('Pages.Homepage');
-
+        return redirect('/');
     }
 
 
-    public function Login()
+    public function Login(Request $request)
     {
 
-        $valiDateData = request()->validate([
+        $valiDateData = $request->validate([
 
-            'email' => 'required',
-            'password' => 'required'
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
-        if(auth()->attempt($valiDateData)){
+        // return $valiDateData;
 
-            return view('Pages.HomePage');
+        if(Auth::attempt($valiDateData)){
+
+            return redirect('/');
         }
 
         else{
 
-            return view('Auth.User_Login')->with("wrong");
+            echo "hello";
         }
     }
+
+
 
     public function Logout()
     {
         auth()->logout();
         return view('Pages.Homepage');
-        
-
     }
 }

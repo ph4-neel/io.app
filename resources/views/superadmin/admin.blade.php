@@ -197,6 +197,14 @@
                                     </a>
                                     <!-- more inner pages-->
                                 </li>
+                                <li class="nav-item"><a class="nav-link" href="{{url('/User_list')}}"
+                                    aria-expanded="false">
+                                    <div class="d-flex align-items-center"><span
+                                            class="nav-link-text ps-1">User Lists</span>
+                                    </div>
+                                </a>
+                                <!-- more inner pages-->
+                            </li>
                                 <li class="nav-item"><a class="nav-link" href="pages/user/settings.html"
                                         aria-expanded="false">
                                         <div class="d-flex align-items-center"><span
@@ -369,6 +377,18 @@
                         <a href="{{url('/Admin_video')}}"
                             class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
                                 class="fas fa-plus me-2"></span>Add Video Resume</a>
+                    </div>
+
+                </div>
+
+                <div class="row gx-0 kanban-header rounded-2 px-card py-2 mt-2 mb-3">
+                    <div class="col d-flex align-items-center">
+                        <h5 class="mb-0">Add Resume writing</h5>
+                    </div>
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="{{url('/Admin_resume')}}"
+                            class="btn btn-sm btn-falcon-default me-2 d-none d-md-block"><span
+                                class="fas fa-plus me-2"></span>Add Resume Writing</a>
                     </div>
 
                 </div>
